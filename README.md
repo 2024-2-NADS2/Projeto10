@@ -8,7 +8,7 @@
 
 ## Nome do Grupo - PET HERO
 
-## Integrantes: <a href="https://www.linkedin.com/in/andreiaalaini/">Andreia Alaini Silva</a>, <a href="https://www.linkedin.com/in/victorbarq/">Bruna Farias Pires</a>, <a href="https://www.linkedin.com/in/victorbarq/">Guilherme Mendes Albuquerque</a>, <a href="https://www.linkedin.com/in/victorbarq/">Luan Meirelles</a>
+## Integrantes: <a href="https://www.linkedin.com/in/andreiaalainisilva/">Andreia Alaini Silva</a>, <a href="https://www.linkedin.com/in/editar/">Bruna Farias Pires</a>, <a href="https://www.linkedin.com/in/guilherme-mendes-albuquerque/">Guilherme Mendes Albuquerque</a>, <a href="https://www.linkedin.com/in/editar/">Luan Meirelles</a>
 
 ## Professores Orientadores: <a href="https://www.linkedin.com/in/victorbarq/">Dr. Victor Von Doom</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Saitama</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Strange</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Yoda</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Gero</a>
 
