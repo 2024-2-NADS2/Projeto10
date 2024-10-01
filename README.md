@@ -10,7 +10,7 @@
 
 ## Integrantes: <a href="https://www.linkedin.com/in/andreiaalainisilva/">Andreia Alaini Silva</a>, <a href="https://www.linkedin.com/in/editar/">Bruna Farias Pires</a>, <a href="https://www.linkedin.com/in/guilherme-mendes-albuquerque/">Guilherme Mendes Albuquerque</a>, <a href="https://www.linkedin.com/in/editar/">Luan Meirelles</a>
 
-## Professores Orientadores: <a href="https://www.linkedin.com/in/victorbarq/">Dr. Victor Von Doom</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Saitama</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Strange</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Yoda</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Gero</a>
+## Professores Orientadores: <a href="https://www.linkedin.com/in/victorbarq/">Victor</a>, <a href="https://www.linkedin.com/in/victorbarq/">Aimar</a>, <a href="https://www.linkedin.com/in/victorbarq/">Savino</a>, <a href="https://www.linkedin.com/in/victorbarq/">Chico</a>, <a href="https://www.linkedin.com/in/victorbarq/">José Boesso</a>
 
 ## Descrição
 
