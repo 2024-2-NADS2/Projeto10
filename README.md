@@ -29,16 +29,16 @@ A proposta do "Pet Hero" se alinha a uma crescente demanda social por soluções
 -Raiz<br>
 |<br>
 |-->documentos<br>
-  &emsp;|-->antigos<br>
-  &emsp;|Documentação.docx<br>
-|-->executáveis<br>
-  &emsp;|-->windows<br>
-  &emsp;|-->android<br>
-  &emsp;|-->HTML<br>
+  &emsp;|-->Requisitos_Funcionais-NaoFuncionais.pdf<br>
 |-->imagens<br>
+&emsp;|-->Pagina_Home.png<br>
 |-->src<br>
   &emsp;|-->Backend<br>
+     &emsp;|-->PetHero.sln<br>
   &emsp;|-->Frontend<br>
+     &emsp;|-->PetHero.js<br>
+      &emsp;|-->PetHero.html<br>
+       &emsp;|-->PetHero.css<br>
 |readme.md<br>
 
 A pasta raiz contem dois arquivos que devem ser alterados:
