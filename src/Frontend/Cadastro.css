@@ -24,19 +24,19 @@ body {
     width: 100%;
 }
 
-.login-box, .register-box {
+.caixa-de-login, .caixa-de-registro {
     padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.login-box {
+.caixa-de-login {
     background-color: #d6f0f0;
     width: 50%;
 }
 
-.register-box {
+.caixa-de-registro {
     background-color: #f0fbfb;
     width: 50%;
     text-align: left;
@@ -53,7 +53,7 @@ label {
     color: #333;
 }
 
-input[type="text"], input[type="password"] {
+input[type="texto"], input[type="senha"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
