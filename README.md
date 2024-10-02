@@ -20,12 +20,9 @@
 </p>
 
 
-De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
-<br><br>
-Meu projeto ajuda estudantes FECAP a configurarem seus githubs.
-<br><br>
-May the force be with you! yesss
-<br><br>
+A adoção de animais é uma prática que tem ganhado cada vez mais destaque na sociedade contemporânea, especialmente em um cenário onde a população de animais abandonados cresce de forma alarmante. Nesse contexto, surge o projeto "Pet Hero", uma plataforma digital desenvolvida para facilitar a conexão entre Organizações Não Governamentais (ONGs) e potenciais adotantes, promovendo a adoção responsável e consciente de pets. O "Pet Hero" visa criar um ambiente virtual que simplifique a busca pelo animal de estimação ideal, levando em consideração as necessidades e preferências das famílias e as características dos animais disponíveis para adoção.
+Além da promoção da adoção, o site também terá um espaço dedicado à doação de itens essenciais, como ração e brinquedos, que contribuirão para o bem-estar dos animais em abrigos e em lares temporários. Através de uma interface intuitiva e amigável, o projeto busca não apenas aumentar o número de adoções, mas também conscientizar a população sobre a importância do cuidado e do amor pelos animais, ressaltando a necessidade de um lar adequado e responsável.
+A proposta do "Pet Hero" se alinha a uma crescente demanda social por soluções que integrem tecnologia e solidariedade, oferecendo um modelo que pode ser replicado por diferentes ONGs, ampliando assim o alcance e a efetividade das ações voltadas para a proteção e adoção de animais. Este trabalho apresenta uma análise detalhada das funcionalidades do site, bem como as metodologias adotadas para garantir a sua eficácia e relevância no contexto atual.
 
 ## 🛠 Estrutura de pastas
 
