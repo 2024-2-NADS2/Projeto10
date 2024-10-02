@@ -39,6 +39,10 @@ A proposta do "Pet Hero" se alinha a uma crescente demanda social por soluções
      &emsp;|-->PetHero.js<br>
       &emsp;|-->PetHero.html<br>
        &emsp;|-->PetHero.css<br>
+         &emsp;|-->Cadastro.css<br>
+             &emsp;|-->Cadastro.html<br>
+                 &emsp;|-->.vscode<br>
+       
 |readme.md<br>
 
 A pasta raiz contem dois arquivos que devem ser alterados:
