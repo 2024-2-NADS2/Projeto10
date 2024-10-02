@@ -8,7 +8,7 @@
 
 ## Nome do Grupo - PET HERO
 
-## Integrantes: <a href="https://www.linkedin.com/in/andreia-alaini-854a88208/">Andreia Alaini Silva</a>, <a href="https://www.linkedin.com/in/bruna-farias-727a27277/">Bruna Farias Pires</a>, <a href="https://www.linkedin.com/in/guilherme-mendes-albuquerque-6a50b330a/">Guilherme Mendes Albuquerque</a>, <a href="https://www.linkedin.com/in/luan-m-132452142/">Luan Meireles</a>
+## Integrantes: <a href="https://www.linkedin.com/in/andreia-alaini-854a88208/">Andreia Alaini Silva</a>, <a href="https://www.linkedin.com/in/bruna-farias-727a27277/">Bruna Farias Pires</a>, <a href="https://www.linkedin.com/in/guilherme-mendes-albuquerque-6a50b330a/">Guilherme Mendes Albuquerque</a>, <a href="https://www.linkedin.com/in/luan-m-132452142/">Luan Meireles Franchini</a>
 
 ## Professores Orientadores: <a href="https://www.linkedin.com/in/victorbarq/">Victor Rosetti</a>, <a href="https://www.linkedin.com/in/aimarlopes/">Aimar Lopes</a>, <a href="https://www.linkedin.com/in/eduardo-savino-gomes-77833a10/">Eduardo Savino</a>, <a href="https://www.linkedin.com/in/francisco-escobar/">Francisco Escobar (Chico)</a>, <a href="https://www.linkedin.com/in/jbuesso/">José Buesso</a>
 
