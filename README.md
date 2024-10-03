@@ -67,7 +67,7 @@ Há também 4 pastas que seguem da seguinte forma:
 Não é necessário para o momento.
 
 ## 🎨 Figma
-Clique no link ao lado para ter acesso ao Figma da Pet Hero: https://www.figma.com/design/EiUZhZWVRu1PLEqze8aYb5/Untitled-(Copy)
+Clique no link ao lado para ter acesso ao Figma da Pet Hero:https://www.figma.com/design/LOzkfRIS5qGdcnKGuShdS6/GUIA-DE-ESTILO?node-id=0-1&node-type=canvas&t=niS7wcun9wPuSQAZ-0
 
 ## 💻 Configuração para Desenvolvimento
 
