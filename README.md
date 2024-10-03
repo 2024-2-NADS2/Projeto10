@@ -16,8 +16,6 @@
 
 <p align="center">
 <img src="https://github.com/2024-2-NADS2/Projeto10/blob/main/imagens/Pagina_Home.png" alt="NOME DO JOGO" border="0">
-
-
   
 </p>
 <p>
@@ -67,7 +65,7 @@ Há também 4 pastas que seguem da seguinte forma:
 Não é necessário para o momento.
 
 ## 🎨 Figma
-Clique no link ao lado para ter acesso ao Figma da Pet Hero: https://www.figma.com/design/LOzkfRIS5qGdcnKGuShdS6/GUIA-DE-ESTILO?node-id=0-1&node-type=canvas&t=niS7wcun9wPuSQAZ-0
+Clique no link para ter acesso ao Figma da Pet Hero: https://www.figma.com/design/LOzkfRIS5qGdcnKGuShdS6/GUIA-DE-ESTILO?node-id=0-1&node-type=canvas&t=niS7wcun9wPuSQAZ-0
 
 ## 🗃 Histórico de lançamentos
 
