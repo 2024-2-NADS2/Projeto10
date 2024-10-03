@@ -66,6 +66,9 @@ Há também 4 pastas que seguem da seguinte forma:
 ## 🛠 Instalação
 Não é necessário para o momento.
 
+## 🎨 Figma
+Clique no link ao lado para ter acesso ao Figma da Pet Hero: https://www.figma.com/design/EiUZhZWVRu1PLEqze8aYb5/Untitled-(Copy)
+
 ## 💻 Configuração para Desenvolvimento
 
 Descreva como instalar todas as dependências para desenvolvimento e como rodar um test-suite automatizado de algum tipo. Se necessário, faça isso para múltiplas plataformas.
