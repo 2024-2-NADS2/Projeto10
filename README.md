@@ -21,7 +21,7 @@
   
 </p>
 <p>
-----------------(https://github.com/user-attachments/assets/3e55daae-e5e6-4fb4-a446-7b9809487a9f)-----------------
+-------------> (https://github.com/user-attachments/assets/3e55daae-e5e6-4fb4-a446-7b9809487a9f)
 </p>
 
 A adoção de animais é uma prática que tem ganhado cada vez mais destaque na sociedade contemporânea, especialmente em um cenário onde a população de animais abandonados cresce de forma alarmante. Nesse contexto, surge o projeto "Pet Hero", uma plataforma digital desenvolvida para facilitar a conexão entre Organizações Não Governamentais (ONGs) e potenciais adotantes, promovendo a adoção responsável e consciente de pets. O "Pet Hero" visa criar um ambiente virtual que simplifique a busca pelo animal de estimação ideal, levando em consideração as necessidades e preferências das famílias e as características dos animais disponíveis para adoção.
