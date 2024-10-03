@@ -67,21 +67,7 @@ Há também 4 pastas que seguem da seguinte forma:
 Não é necessário para o momento.
 
 ## 🎨 Figma
-Clique no link ao lado para ter acesso ao Figma da Pet Hero:https://www.figma.com/design/LOzkfRIS5qGdcnKGuShdS6/GUIA-DE-ESTILO?node-id=0-1&node-type=canvas&t=niS7wcun9wPuSQAZ-0
-
-## 💻 Configuração para Desenvolvimento
-
-Descreva como instalar todas as dependências para desenvolvimento e como rodar um test-suite automatizado de algum tipo. Se necessário, faça isso para múltiplas plataformas.
-
-Para abrir este projeto você necessita das seguintes ferramentas:
-
--<a href="https://godotengine.org/download">GODOT</a>
-
-```sh
-make install
-npm test
-Coloque código do prompt de comnando se for necessário
-```
+Clique no link ao lado para ter acesso ao Figma da Pet Hero: https://www.figma.com/design/LOzkfRIS5qGdcnKGuShdS6/GUIA-DE-ESTILO?node-id=0-1&node-type=canvas&t=niS7wcun9wPuSQAZ-0
 
 ## 🗃 Histórico de lançamentos
 
