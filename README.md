@@ -16,6 +16,8 @@
 
 <p align="center">
 <img src="https://github.com/2024-2-NADS2/Projeto10/blob/main/imagens/Pagina_Home.png" alt="NOME DO JOGO" border="0">
+![image](https://github.com/user-attachments/assets/3e55daae-e5e6-4fb4-a446-7b9809487a9f)
+
   
 </p>
 
