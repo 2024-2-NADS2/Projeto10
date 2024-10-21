@@ -36,15 +36,6 @@ A proposta do "Pet Hero" se alinha a uma crescente demanda social por soluções
 |-->imagens<br>
 &emsp;|-->Pagina_Home.png<br>
 |-->src<br>
-  &emsp;|-->Backend<br>
-     &emsp;|-->PetHero.sln<br>
-  &emsp;|-->Frontend<br>
-     &emsp;|-->PetHero.js<br>
-      &emsp;|-->PetHero.html<br>
-       &emsp;|-->PetHero.css<br>
-         &emsp;|-->Cadastro.css<br>
-             &emsp;|-->Cadastro.html<br>
-                 &emsp;|-->.vscode<br>
        
 |readme.md<br>
 
