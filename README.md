@@ -61,7 +61,7 @@ Há também 4 pastas que seguem da seguinte forma:
 <b>src</b>: Pasta que contém o código fonte.
 
 ## 🛠 Instalação
-Não é necessário para o momento.
+Não é necessário para o momento. Encontre o index.html na pasta executáveis e execute-o como uma página WEB (através de algum browser).
 
 ## 🎨 Figma
 Clique no link para ter acesso ao Figma da Pet Hero: <a href="https://www.figma.com/design/LOzkfRIS5qGdcnKGuShdS6/GUIA-DE-ESTILO?node-id=0-1&node-type=canvas&t=niS7wcun9wPuSQAZ-0">Figma</a>
