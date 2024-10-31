@@ -15,7 +15,7 @@ app.use('/api/animais', animalRoutes);
 app.use('/api/usuarios', usuarioRoutes);
 app.use('/api/ongs', ongRoutes);
 
-const PORT = 3002;
+const PORT = 3001;
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
 });
