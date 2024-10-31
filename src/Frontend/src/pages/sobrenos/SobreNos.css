@@ -1,0 +1,27 @@
+/* src/pages/sobrenos/SobreNos.css */
+
+.sobre-nos-container {
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #333;
+    font-family: Arial, sans-serif;
+  }
+  
+  .sobre-nos-container h1 {
+    font-size: 2.5em;
+    color: #2e7d32;
+    margin-bottom: 20px;
+  }
+  
+  .sobre-nos-container h2 {
+    font-size: 1.8em;
+    color: #1b5e20;
+    margin-top: 20px;
+  }
+  
+  .sobre-nos-container p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }  

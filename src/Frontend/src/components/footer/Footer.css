@@ -1,0 +1,33 @@
+footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 50px;
+    background-color: #004D40;
+    color: #fff;
+}
+
+.footer-section {
+    width: 30%;
+    text-align: center;
+}
+
+.footer-section h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    font-size: 14px;
+}
+
+.footer-section a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #229c88;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 16px;
+}

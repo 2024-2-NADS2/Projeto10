@@ -1,0 +1,21 @@
+/* src/components/Categories/Categories.css */
+.categories {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.category {
+  background-color: #00ACC1;
+  color: #fff;
+  padding: 15px 30px;
+  margin: 0 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.category:hover {
+  background-color: #00838F;
+}
