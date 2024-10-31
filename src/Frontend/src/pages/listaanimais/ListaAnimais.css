@@ -1,0 +1,30 @@
+/* src/pages/listaanimais/ListaAnimais.css */
+
+.lista-animais {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.animal-card {
+    width: 6cm;
+    height: 5cm;
+    background-color: #4CAF50;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.pet-image {
+    width: 50%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}

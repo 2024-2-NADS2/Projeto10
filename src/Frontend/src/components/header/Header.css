@@ -1,0 +1,36 @@
+/* src/components/Header/Header.css */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #004D40;
+    color: #fff;
+}
+
+.header .logo img {
+    height: 100px;
+}
+
+.header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.header nav ul li {
+    margin: 0 20px;
+}
+
+.header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header .login a {
+    color: #80CBC4;
+    text-decoration: none;
+    font-weight: bold;
+}
