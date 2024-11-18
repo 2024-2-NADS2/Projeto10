@@ -1,66 +1,124 @@
-/* Estilos gerais */
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    color: #69a19b;
-  }
-  
-  h2 {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .box {
-    display: flex;
-    gap: 20px;
-    background-color: #d2e7e3;
-    padding: 20px;
-    border-radius: 10px;
-  }
-  
-  .login, .register {
-    background-color: #b5d0c9;
-    padding: 20px;
-    border-radius: 10px;
-    width: 250px;
-  }
-  
-  h3 {
-    font-size: 1.2em;
-    margin-bottom: 15px;
-  }
-  
-  label {
-    display: block;
-    font-size: 0.9em;
-    margin-bottom: 5px;
-  }
-  
-  input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-  }
-  
-  button {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-    background-color: #1fa078;
-    color: white;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color:#178f68;
-  }
+/* Estilo geral */
+.login-cadastro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e8f8f7;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+}
+
+h2 {
+  color: #69a19b;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+/* Contêiner principal */
+.login-cadastro-box {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #f0fafa;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  width: 100%;
+}
+
+/* Seção de login */
+.login-section {
+  background-color: #d9f0ec;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-section h3 {
+  color: #004d40;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+label {
+  font-size: 14px;
+  color: #004d40;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #69a19b;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.login-button {
+  background-color: #1fa078;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #178f68;
+}
+
+/* Seção de registro */
+.register-section {
+  width: 400px;
+  text-align: left;
+}
+
+.register-section h3 {
+  color: #004d40;
+  margin-bottom: 20px;
+}
+
+.register-section p {
+  color: #00695c;
+  font-size: 14px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.register-section ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.register-section li {
+  font-size: 14px;
+  color: #004d40;
+  margin-bottom: 10px;
+}
+
+.register-button {
+  background-color: #1fa078;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.register-button:hover {
+  background-color: #178f68;
+}

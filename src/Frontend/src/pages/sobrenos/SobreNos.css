@@ -1,27 +1,103 @@
-/* src/pages/sobrenos/SobreNos.css */
+.sobre-nos {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
 
-.sobre-nos-container {
-    padding: 40px;
-    max-width: 800px;
-    margin: 0 auto;
-    color: #333;
-    font-family: Arial, sans-serif;
+.banner img {
+  width: 100%; /* Ajusta a largura para 80% da largura do container/página */
+  max-width: 1400px; /* Limita a largura máxima a um tamanho específico */
+  height: auto; /* Mantém a proporção da imagem */
+  display: block;
+  margin: 0 auto 20px; /* Centraliza a imagem e adiciona um espaço inferior */
+}
+
+.welcome-section {
+  display: flex;
+  align-items: center;
+  background-color: #cfe9e5;
+  padding: 20px;
+}
+
+.header-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.header-text {
+  margin-left: 20px;
+  flex: 1;
+}
+
+.header-text h1 {
+  font-size: 2.5em;
+  color: #004d40;
+}
+
+.header-text p {
+  font-size: 1.1em;
+}
+
+.titulo-principal {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 2.5em;
+  color: #004d40;
+}
+
+.historia {
+  display: flex;
+  background-color: #f6f9fc;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.historia-content {
+  flex: 1;
+  padding: 10px;
+}
+
+.historia-content h2 {
+  font-size: 2em;
+  color: #004d40;
+}
+
+.historia-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.missao {
+  display: flex;
+  background-color: #a7d8de;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.missao-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.missao-content {
+  flex: 1;
+  padding: 10px;
+}
+
+.missao-content h2 {
+  font-size: 2em;
+  color: #004d40;
+}
+
+@media (max-width: 768px) {
+  .welcome-section, .historia, .missao {
+    flex-direction: column;
   }
-  
-  .sobre-nos-container h1 {
-    font-size: 2.5em;
-    color: #2e7d32;
-    margin-bottom: 20px;
+
+  .header-text, .historia-content, .missao-content {
+    margin-left: 0;
   }
-  
-  .sobre-nos-container h2 {
-    font-size: 1.8em;
-    color: #1b5e20;
-    margin-top: 20px;
-  }
-  
-  .sobre-nos-container p {
-    font-size: 1.1em;
-    line-height: 1.6;
-    margin-bottom: 20px;
-  }  
+}

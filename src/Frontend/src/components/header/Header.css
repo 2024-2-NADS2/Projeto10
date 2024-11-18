@@ -1,36 +1,83 @@
-/* src/components/Header/Header.css */
+
 .header {
+    display: flex;
+    flex-direction: column;
+    background-color: #D0EFE9;
+    color: #1E4E58;
+}
+
+/* estilos para a parte superior do cabeçalho (logo e login) */
+.header-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
-    background-color: #004D40;
-    color: #fff;
+    padding: 3px 50px;
 }
 
 .header .logo img {
     height: 100px;
+    width: auto;
 }
 
-.header nav ul {
+/* estilo do botao de login */
+.header .login a {
+    color: #1E4E58;
+    background-color: #B2DFDB;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.header .login a:hover {
+    background-color: #80CBC4;
+}
+
+/* estilos para o menu de navegação */
+.header-nav {
+    background-color: #1E4E58;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.header-nav ul {
     list-style: none;
     display: flex;
+    justify-content: center;
     margin: 0;
     padding: 0;
+    gap: 100px;
 }
 
-.header nav ul li {
-    margin: 0 20px;
-}
-
-.header nav ul li a {
-    color: #fff;
+.header-nav ul li a {
+    color: #fdfdfd;
     text-decoration: none;
     font-weight: bold;
 }
 
-.header .login a {
-    color: #80CBC4;
-    text-decoration: none;
+.header-nav ul li:hover a::after {
+    content: " ▾";
+}
+
+/* estilo do botão Sou ONG */
+.header .login-buttons .sou-ong a {
+    color: #1E4E58;
+    background-color: #B2DFDB;
+    padding: 10px 20px; /* mesmo tamanho do botão de login */
+    border-radius: 5px; /* mesmo arredondamento */
     font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center; /* texto centralizado */
+    transition: background-color 0.3s;
+}
+
+.header .login-buttons .sou-ong a:hover {
+    background-color: #80CBC4;
+    text-decoration: none;
 }

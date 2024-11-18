@@ -1,0 +1,99 @@
+.sou-ong-container {
+    background-color: #eaf8f7;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .form-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1e4e58;
+    margin-bottom: 20px;
+  }
+  
+  .form-card {
+    background-color: #d0efe9;
+    border-radius: 10px;
+    width: 400px;
+    margin: 0 auto 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1e4e58;
+    margin-bottom: 10px;
+  }
+  
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #b2dfdb;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  .submit-button {
+    background-color: #1e4e58;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .submit-button:hover {
+    background-color: #229c88;
+  }
+  
+  .question {
+    margin: 20px 0;
+    text-align: left;
+  }
+  
+  .question label {
+    font-size: 14px;
+    color: #1e4e58;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .yes-button,
+  .no-button {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .yes-button {
+    background-color: #80cbc4;
+    color: #ffffff;
+  }
+  
+  .no-button {
+    background-color: #e57373;
+    color: #ffffff;
+  }
+  
+  .yes-button:hover {
+    background-color: #4db6ac;
+  }
+  
+  .no-button:hover {
+    background-color: #ef5350;
+  }  

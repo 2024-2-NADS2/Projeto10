@@ -7,7 +7,7 @@ function FeaturedPets() {
     return (
         <section className="featured-pets">
             <div className="pet-card">
-                <img src="/cachorro.jpg" alt="Cachorro" />
+                <img src="/imagens/cachorro.jpg" alt="Cachorro" />
                 <div className="pet-info">
                     <p><strong>Nome:</strong> Tob</p>
                     <p><strong>Idade:</strong> 3 anos</p>
@@ -23,8 +23,9 @@ function FeaturedPets() {
                 </div>
             </div>
             <div className="more-pets">
-                Mais de 300 pets cadastrados<br />         
-                <Link to="/lista-animais">Conheça-os</Link> 
+                <img src="/pata.png" alt="Pata" className="paw-icon" /> {/* Ícone de patinha */}
+                <p>Mais de 300 pets cadastrados</p>
+                <Link to="/lista-animais">Conheça-os</Link>
             </div>
         </section>
     );
