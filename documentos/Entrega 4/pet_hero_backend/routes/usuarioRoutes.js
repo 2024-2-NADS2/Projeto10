@@ -9,6 +9,8 @@ router.get('/', usuarioController.getAll);
 // Rota para criar um novo usuário
 router.post('/', usuarioController.create);
 
+router.post('/cadastro', usuarioController.create);
+
 // Rota para buscar um usuário específico pelo ID
 router.get('/:id', usuarioController.getById);
 

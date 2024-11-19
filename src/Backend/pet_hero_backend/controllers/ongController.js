@@ -1,9 +1,9 @@
-// controllers/usuarioController.js
+// controllers/ongController.js
 const db = require('../database');
 
 module.exports = {
     getAll: (req, res) => {
-        db.all("SELECT * FROM Usuarios", [], (err, rows) => {
+        db.all("SELECT * FROM Ongs", [], (err, rows) => {
             if (err) {
                 res.status(500).json({ error: err.message });
                 return;
@@ -13,10 +13,10 @@ module.exports = {
     },
 
     create: (req, res) => {
-        const { nome, email, senha, telefone, endereco } = req.body;
+        const { nome, endereco, telefone, email, descricao } = req.body;
         db.run(
-            `INSERT INTO Usuarios (nome, email, senha, telefone, endereco) VALUES (?, ?, ?, ?, ?)`,
-            [nome, email, senha, telefone, endereco],
+            `INSERT INTO Ongs (nome, endereco, telefone, email, descricao) VALUES (?, ?, ?, ?, ?)`,
+            [nome, endereco, telefone, email, descricao],
             function (err) {
                 if (err) {
                     res.status(500).json({ error: err.message });
@@ -29,39 +29,39 @@ module.exports = {
 
     getById: (req, res) => {
         const { id } = req.params;
-        db.get("SELECT * FROM Usuarios WHERE id = ?", [id], (err, row) => {
+        db.get("SELECT * FROM Ongs WHERE id = ?", [id], (err, row) => {
             if (err) {
                 res.status(500).json({ error: err.message });
                 return;
             }
-            row ? res.json(row) : res.status(404).json({ message: "Usuário não encontrado" });
+            row ? res.json(row) : res.status(404).json({ message: "ONG não encontrada" });
         });
     },
 
     update: (req, res) => {
         const { id } = req.params;
-        const { nome, email, senha, telefone, endereco } = req.body;
+        const { nome, endereco, telefone, email, descricao } = req.body;
         db.run(
-            `UPDATE Usuarios SET nome = ?, email = ?, senha = ?, telefone = ?, endereco = ? WHERE id = ?`,
-            [nome, email, senha, telefone, endereco, id],
+            `UPDATE Ongs SET nome = ?, endereco = ?, telefone = ?, email = ?, descricao = ? WHERE id = ?`,
+            [nome, endereco, telefone, email, descricao, id],
             function (err) {
                 if (err) {
                     res.status(500).json({ error: err.message });
                     return;
                 }
-                res.json({ message: "Usuário atualizado com sucesso" });
+                res.json({ message: "ONG atualizada com sucesso" });
             }
         );
     },
 
     delete: (req, res) => {
         const { id } = req.params;
-        db.run("DELETE FROM Usuarios WHERE id = ?", [id], function (err) {
+        db.run("DELETE FROM Ongs WHERE id = ?", [id], function (err) {
             if (err) {
                 res.status(500).json({ error: err.message });
                 return;
             }
-            res.json({ message: "Usuário removido com sucesso" });
+            res.json({ message: "ONG removida com sucesso" });
         });
     }
 };
