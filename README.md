@@ -15,7 +15,7 @@
 ## Descrição
 
 <p align="center">
-<img src="https://github.com/2024-2-NADS2/Projeto10/blob/main/imagens/Pagina_Home.png" alt="NOME DO JOGO" border="0">
+<img src="https://github.com/2024-2-NADS2/Projeto10/blob/main/Imagens/Pagina%20inicial.jpg" alt="NOME DO JOGO" border="0">
   
 </p>
 <p>
