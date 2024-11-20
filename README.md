@@ -15,7 +15,7 @@
 ## Descrição
 
 <p align="center">
-<img src="https://github.com/2024-2-NADS2/Projeto10/blob/main/imagens/Pagina_Home.png" alt="NOME DO JOGO" border="0">
+<img src="https://github.com/2024-2-NADS2/Projeto10/blob/main/Imagens/Pagina%20inicial%202.jpg" alt="NOME DO JOGO" border="0">
   
 </p>
 <p>
@@ -53,6 +53,7 @@ Há também 4 pastas que seguem da seguinte forma:
 
 ## 🛠 Instalação
 Não é necessário para o momento. Encontre o index.html na pasta executáveis e execute-o como uma página WEB (através de algum browser).
+O site está hospedado no NETLIFY. Para visualizar, clique aqui https://petheropi.netlify.app/
 
 ## 🎨 Figma
 Clique no link para ter acesso ao Figma da Pet Hero: <a href="https://www.figma.com/design/LOzkfRIS5qGdcnKGuShdS6/GUIA-DE-ESTILO?node-id=0-1&node-type=canvas&t=niS7wcun9wPuSQAZ-0">Figma</a>
