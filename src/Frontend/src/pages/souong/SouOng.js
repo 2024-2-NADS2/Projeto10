@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import api from "../../services/api.js"; // Importa a configuração do Axios
+import api from "../../services/api.js"; // importa a configuração do Axios
 import "./SouOng.css";
 
 function SouOng() {
@@ -11,47 +11,68 @@ function SouOng() {
         descricao: "",
     });
 
+    const [petData, setPetData] = useState({
+        nomePet: "",
+        idadePet: "",
+        especie: "",
+    });
+
     const [showPetForm, setShowPetForm] = useState(false);
     const [showSubmitButton, setShowSubmitButton] = useState(false);
 
-    // Atualiza os valores do formulário
+    // Atualiza os valores do formulário principal
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prevState) => ({ ...prevState, [name]: value }));
     };
 
-    // Função para enviar os dados ao backend
+    // Atualiza os valores do formulário de pet
+    const handlePetChange = (e) => {
+        const { name, value } = e.target;
+        setPetData((prevState) => ({ ...prevState, [name]: value }));
+    };
+
+    // Função para enviar os dados ao backend (ONG)
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         try {
             const { nome, email, telefone, endereco, descricao } = formData;
 
-            // Envia os dados para o backend com o link correto
-            const response = await api.post("https://fgc5kq-3001.csb.app/api/ongs", {
+            const response = await api.post("/ongs", {
                 nome,
                 email,
                 telefone,
-                endereco,  // Endereço da ONG
-                descricao,  // Descrição da ONG
+                endereco,
+                descricao,
             });
 
-            // Se a requisição for bem-sucedida
             console.log("ONG cadastrada com sucesso:", response.data);
             alert("Cadastro realizado com sucesso!");
-
         } catch (error) {
-            // Exibindo o erro detalhado
-            if (error.response) {
-                console.error("Erro ao cadastrar ONG:", error.response);
-                alert("Erro ao realizar o cadastro: " + error.response.data.message);
-            } else if (error.request) {
-                console.error("Erro na requisição:", error.request);
-                alert("Erro de comunicação com o servidor. Tente novamente.");
-            } else {
-                console.error("Erro desconhecido:", error.message);
-                alert("Erro desconhecido. Tente novamente.");
-            }
+            console.error("Erro ao cadastrar ONG:", error);
+            alert("Erro ao realizar o cadastro. Tente novamente.");
+        }
+    };
+
+    // Função para enviar os dados do formulário de pet
+    const handlePetSubmit = async (e) => {
+        e.preventDefault();
+
+        try {
+            const { nomePet, idadePet, especie } = petData;
+
+            const response = await api.post("/pets", {
+                nome: nomePet,
+                idade: idadePet,
+                especie,
+            });
+
+            console.log("Pet cadastrado com sucesso:", response.data);
+            alert("Pet cadastrado com sucesso!");
+        } catch (error) {
+            console.error("Erro ao cadastrar pet:", error);
+            alert("Erro ao realizar o cadastro do pet. Tente novamente.");
         }
     };
 
@@ -143,7 +164,35 @@ function SouOng() {
             {showPetForm && (
                 <div className="form-card">
                     <h2 className="section-title">Cadastre seu pet</h2>
-                    {/* Implemente o formulário de pet aqui */}
+                    <form onSubmit={handlePetSubmit}>
+                        <input
+                            type="text"
+                            name="nomePet"
+                            placeholder="Nome do pet"
+                            value={petData.nomePet}
+                            onChange={handlePetChange}
+                            required
+                        />
+                        <input
+                            type="text"
+                            name="idadePet"
+                            placeholder="Idade do pet"
+                            value={petData.idadePet}
+                            onChange={handlePetChange}
+                            required
+                        />
+                        <input
+                            type="text"
+                            name="especie"
+                            placeholder="Espécie do pet (Cachorro, Gato, etc.)"
+                            value={petData.especie}
+                            onChange={handlePetChange}
+                            required
+                        />
+                        <button type="submit" className="submit-button">
+                            Cadastrar Pet
+                        </button>
+                    </form>
                 </div>
             )}
         </div>
