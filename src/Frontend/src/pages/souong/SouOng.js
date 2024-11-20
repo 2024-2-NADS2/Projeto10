@@ -9,42 +9,56 @@ function SouOng() {
         telefone: "",
         endereco: "",
         descricao: "",
+        senha: "",
+        confirmarSenha: "",
     });
 
     const [petData, setPetData] = useState({
         nomePet: "",
-        idadePet: "",
         especie: "",
+        raca: "",
+        idadePet: "",
+        generoPet: "",
+        vacinado: "",
+        castrado: "",
+        descricaoPet: "",
     });
 
     const [showPetForm, setShowPetForm] = useState(false);
     const [showSubmitButton, setShowSubmitButton] = useState(false);
 
-    // Atualiza os valores do formulário principal
+    // atualiza os valores do formulário principal
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prevState) => ({ ...prevState, [name]: value }));
     };
 
-    // Atualiza os valores do formulário de pet
+    // atualiza os valores do formulário de pet
     const handlePetChange = (e) => {
         const { name, value } = e.target;
         setPetData((prevState) => ({ ...prevState, [name]: value }));
     };
 
-    // Função para enviar os dados ao backend (ONG)
+    // função pra enviar os dados ao backend (ONG)
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        try {
-            const { nome, email, telefone, endereco, descricao } = formData;
+        const { nome, email, telefone, endereco, descricao, senha, confirmarSenha } = formData;
 
+        // Valida se as senhas coincidem
+        if (senha !== confirmarSenha) {
+            alert("As senhas não coincidem. Tente novamente.");
+            return;
+        }
+
+        try {
             const response = await api.post("/ongs", {
                 nome,
                 email,
                 telefone,
                 endereco,
                 descricao,
+                senha,
             });
 
             console.log("ONG cadastrada com sucesso:", response.data);
@@ -55,17 +69,22 @@ function SouOng() {
         }
     };
 
-    // Função para enviar os dados do formulário de pet
+    // função pra enviar os dados do formulário de pet
     const handlePetSubmit = async (e) => {
         e.preventDefault();
 
         try {
-            const { nomePet, idadePet, especie } = petData;
+            const { nomePet, especie, raca, idadePet, generoPet, vacinado, castrado, descricaoPet } = petData;
 
             const response = await api.post("/pets", {
                 nome: nomePet,
                 idade: idadePet,
                 especie,
+                raca,
+                generoPet,
+                vacinado,
+                castrado,
+                descricaoPet,
             });
 
             console.log("Pet cadastrado com sucesso:", response.data);
@@ -103,7 +122,7 @@ function SouOng() {
                     <input
                         type="email"
                         name="email"
-                        placeholder="Digite um e-mail"
+                        placeholder="Digite o e-mail da ONG"
                         value={formData.email}
                         onChange={handleChange}
                         required
@@ -127,8 +146,25 @@ function SouOng() {
                     <input
                         type="text"
                         name="descricao"
-                        placeholder="Digite a descrição"
+                        placeholder="Digite uma breve descrição sobre a ONG"
                         value={formData.descricao}
+                        onChange={handleChange}
+                        required
+                    />
+                    {/* esse eh o campo da senha */}
+                    <input
+                        type="password"
+                        name="senha"
+                        placeholder="Digite sua senha"
+                        value={formData.senha}
+                        onChange={handleChange}
+                        required
+                    />
+                    <input
+                        type="password"
+                        name="confirmarSenha"
+                        placeholder="Confirme sua senha"
+                        value={formData.confirmarSenha}
                         onChange={handleChange}
                         required
                     />
@@ -173,6 +209,25 @@ function SouOng() {
                             onChange={handlePetChange}
                             required
                         />
+                        
+                        <input
+                            type="text"
+                            name="especie"
+                            placeholder="Espécie do pet (Cachorro, Gato, etc.)"
+                            value={petData.especie}
+                            onChange={handlePetChange}
+                            required
+                        />
+                        
+                        <input
+                            type="text"
+                            name="raca"
+                            placeholder="Raça do pet (Golden, Lhasa, etc.)"
+                            value={petData.raca}
+                            onChange={handlePetChange}
+                            required
+                        />
+
                         <input
                             type="text"
                             name="idadePet"
@@ -183,12 +238,40 @@ function SouOng() {
                         />
                         <input
                             type="text"
-                            name="especie"
-                            placeholder="Espécie do pet (Cachorro, Gato, etc.)"
-                            value={petData.especie}
+                            name="generoPet"
+                            placeholder="Gênero do pet"
+                            value={petData.generoPet}
                             onChange={handlePetChange}
                             required
                         />
+
+                        <input
+                            type="text"
+                            name="vacinado"
+                            placeholder="O pet é vacinado? responda com SIM ou NÃO"
+                            value={petData.vacinado}
+                            onChange={handlePetChange}
+                            required
+                        />
+
+                        <input
+                            type="text"
+                            name="castrado"
+                            placeholder="O pet é castrado? responda com SIM ou NÃO"
+                            value={petData.castrado}
+                            onChange={handlePetChange}
+                            required
+                        />
+
+                        <input
+                            type="text"
+                            name="descricaoPet"
+                            placeholder="Escreva uma breve descrição sobre o pet"
+                            value={petData.descricaoPet}
+                            onChange={handlePetChange}
+                            required
+                        />
+
                         <button type="submit" className="submit-button">
                             Cadastrar Pet
                         </button>

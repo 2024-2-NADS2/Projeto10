@@ -32,14 +32,14 @@ function FeaturedPets() {
                     </div>
                     <div className="adopt-button-container">
                         <Link to="/formulario-adocao" className="adopt-button">
-                            <img src="/pata.png" alt="Pata" className="paw-icon-button" />
+                            <img src="imagens/pata.png" alt="Pata" className="paw-icon-button" />
                             <span>Quero Adotar</span>
                         </Link>
                     </div>
                 </div>
             ))}
             <div className="more-pets">
-                <img src="/pata.png" alt="Pata" className="paw-icon" />
+                <img src="imagens/pata.png" alt="Pata" className="paw-icon" />
                 <p>Mais de 300 pets cadastrados</p>
                 <Link to="/lista-animais">Conheça-os</Link>
             </div>

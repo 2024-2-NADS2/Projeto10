@@ -10,7 +10,7 @@ function Header() {
             <div className="header-top">
                 <div className="logo">
                     <Link to="/"> {/* Ao clicar na logo, volta para a página inicial */}
-                        <img src="/logo.png" alt="Pet Hero Logo" />
+                        <img src="imagens/logo.png" alt="Pet Hero Logo" />
                     </Link>
                 </div>
                 <div className="login-buttons">
