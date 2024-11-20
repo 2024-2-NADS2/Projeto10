@@ -1,6 +1,5 @@
-/* src/components/FeaturedPets/FeaturedPets.css */
 
-/* Configurações gerais dos cards de pets */
+/* configurações gerais dos cards de pets */
 .featured-pets {
     display: flex;
     justify-content: space-around;
@@ -15,7 +14,7 @@
     background-color: #229c88;
     border-radius: 15px;
     padding: 16px;
-    text-align: center; /* Centraliza os elementos dentro do card */
+    text-align: center; /* centraliza os elementos dentro do card */
     box-shadow: 0 6px 10px rgba(43, 42, 42, 0.3);
     transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -25,22 +24,21 @@
     box-shadow: 0 8px 15px rgba(43, 42, 42, 0.5);
 }
 
-/* Ajuste do tamanho e estilo das imagens dentro do card */
 .pet-card .pet-image {
     width: 100%;
-    height: 150px; /* Altura fixa */
-    object-fit: cover; /* Garante que a imagem se ajusta sem distorções */
+    height: 150px; /* altura fixa */
+    object-fit: cover; /* aqui a imagem se ajusta sem distorções */
     border-radius: 10px;
 }
 
-/* Estilo das informações sobre o pet */
+/* estilo das informações sobre o pet */
 .pet-info {
     margin-top: 10px;
     font-size: 16px;
     color: #f7f8f8;
 }
 
-/* Estilo para o botão Quero Adotar */
+/* estilo do botão "Quero Adotar" */
 .adopt-button-container {
     display: flex;
     justify-content: center;
@@ -70,11 +68,11 @@
 }
 
 .paw-icon-button {
-    width: 18px; /* Ajusta o tamanho do ícone da pata */
+    width: 18px; /* arruma o tamanho do ícone da pata */
     height: 18px;
 }
 
-/* Mais pets card */
+/* card "mais pets" */
 .more-pets {
     display: flex;
     flex-direction: column;
@@ -107,16 +105,16 @@
 }
 
 .more-pets .paw-icon {
-    width: 150px; /* Ajusta o tamanho da pata */
+    width: 150px; /* essa parte ajusta o tamanho da pata */
     height: auto;
-    margin-bottom: 10px; /* Espaço entre a pata e o texto */
+    margin-bottom: 10px; /* espaço entre a pata e o texto */
 }
 
 .more-pets p {
     color: #ffffff;
     font-size: 16px;
     font-weight: bold;
-    margin-bottom: 10px; /* Espaçamento abaixo do texto */
-    border-bottom: 2px solid #ffffff; /* Linha branca abaixo do texto */
-    padding-bottom: 30px; /* Espaçamento entre a linha e o texto */
+    margin-bottom: 10px; /* espaçamento embaixo do texto */
+    border-bottom: 2px solid #ffffff; /* aquela linha branca */
+    padding-bottom: 30px; /* espaço entre a linha e o texto */
 }

@@ -1,4 +1,3 @@
-// src/components/Header/Header.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
@@ -6,15 +5,15 @@ import './Header.css';
 function Header() {
     return (
         <header className="header">
-            {/* Cabeçalho com logo e botões */}
+            {/* cabeçalho com logo e botões */}
             <div className="header-top">
                 <div className="logo">
-                    <Link to="/"> {/* Ao clicar na logo, volta para a página inicial */}
+                    <Link to="/"> {/* ao clicar na logo volta pra página inicial */}
                         <img src="imagens/logo.png" alt="Pet Hero Logo" />
                     </Link>
                 </div>
                 <div className="login-buttons">
-                    {/* Botão Entrar/Cadastrar-se */}
+                    {/* botão de Entrar/Cadastrar-se */}
                     <div className="login">
                         <Link to="/login-cadastro">
                             <span role="img" aria-label="paw">🐾</span> Entrar/Cadastrar-se
@@ -29,7 +28,7 @@ function Header() {
                 </div>
             </div>
 
-            {/* Menu de navegação abaixo */}
+            {/* menu de navegação sobre nós e tals */}
             <nav className="header-nav">
                 <ul>
                     <li><Link to="/duvidas-sobre-adocao">Dúvidas sobre adoção</Link></li>

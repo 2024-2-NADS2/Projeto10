@@ -6,7 +6,7 @@
     color: #1E4E58;
 }
 
-/* estilos para a parte superior do cabeçalho (logo e login) */
+/* estilos pra parte superior do cabeçalho (logo e login) */
 .header-top {
     display: flex;
     justify-content: space-between;
@@ -36,7 +36,7 @@
     background-color: #80CBC4;
 }
 
-/* estilos para o menu de navegação */
+/* estilos pro menu de navegação */
 .header-nav {
     background-color: #1E4E58;
     text-align: center;

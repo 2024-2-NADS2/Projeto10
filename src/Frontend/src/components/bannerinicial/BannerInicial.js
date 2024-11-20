@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './BannerInicial.css';
 
 const Banner = () => {
@@ -10,13 +10,25 @@ const Banner = () => {
 
   const [currentBanner, setCurrentBanner] = useState(0);
 
+  // Função para ir para o próximo banner
   const handleNext = () => {
     setCurrentBanner((prev) => (prev + 1) % banners.length);
   };
 
+  // Função para ir para o banner anterior
   const handlePrev = () => {
     setCurrentBanner((prev) => (prev - 1 + banners.length) % banners.length);
   };
+
+  // Movimento automático dos banners
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleNext(); // Troca automaticamente para o próximo banner
+    }, 1700); // Altere o valor (5000) para o intervalo desejado em milissegundos (5 segundos)
+
+    // Limpa o intervalo ao desmontar o componente
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="banner-container">

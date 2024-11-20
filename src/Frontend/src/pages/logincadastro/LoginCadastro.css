@@ -1,4 +1,4 @@
-/* Estilo geral */
+/* estilo geral, qualquer mudança pode fazer aq */
 .login-cadastro-container {
   display: flex;
   flex-direction: column;
@@ -15,7 +15,7 @@ h2 {
   margin-bottom: 30px;
 }
 
-/* Contêiner principal */
+/* contêiner principal */
 .login-cadastro-box {
   display: flex;
   gap: 50px;
@@ -29,7 +29,7 @@ h2 {
   width: 100%;
 }
 
-/* Seção de login */
+/* seção de login */
 .login-section {
   background-color: #d9f0ec;
   border-radius: 10px;
@@ -79,7 +79,7 @@ input {
   background-color: #178f68;
 }
 
-/* Seção de registro */
+/* seção "criar minha conta" */
 .register-section {
   width: 400px;
   text-align: left;

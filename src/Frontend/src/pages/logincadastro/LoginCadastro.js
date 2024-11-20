@@ -9,7 +9,7 @@ const LoginCadastro = () => {
     <div className="login-cadastro-container">
       <h2>ACESSAR OU CRIAR CONTA</h2>
       <div className="login-cadastro-box">
-        {/* Sessão de login */}
+        {/* sessão de login */}
         <div className="login-section">
           <h3>Acesse sua Conta</h3>
           <form>
@@ -21,7 +21,7 @@ const LoginCadastro = () => {
           </form>
         </div>
 
-        {/* Sessão de registro */}
+        {/* sessão de "criar minha conta" */}
         <div className="register-section">
           <h3>Criar uma conta é rápido, fácil e gratuito!</h3>
           <p>
@@ -35,7 +35,7 @@ const LoginCadastro = () => {
           <p>Junte-se a nós e ajude a transformar a vida de um bichinho! Cada adoção é uma nova chance.</p>
           <button
             className="register-button"
-            onClick={() => navigate('/crie-sua-conta')} // Adicione o redirecionamento
+            onClick={() => navigate('/crie-sua-conta')}
           >
             Criar minha conta
           </button>

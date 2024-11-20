@@ -107,7 +107,7 @@ function SouOng() {
 
     return (
         <div className="sou-ong-container">
-            <h1 className="form-title">Crie sua conta</h1>
+            <h1 className="form-title">Preencha o formulário abaixo com os dados da sua ONG</h1>
             <div className="form-card">
                 <h2 className="section-title">Crie seu login</h2>
                 <form onSubmit={handleSubmit}>
@@ -122,7 +122,7 @@ function SouOng() {
                     <input
                         type="email"
                         name="email"
-                        placeholder="Digite o e-mail da ONG"
+                        placeholder="E-mail da ONG"
                         value={formData.email}
                         onChange={handleChange}
                         required
@@ -130,7 +130,7 @@ function SouOng() {
                     <input
                         type="tel"
                         name="telefone"
-                        placeholder="Digite o telefone"
+                        placeholder="Telefone"
                         value={formData.telefone}
                         onChange={handleChange}
                         required
@@ -138,7 +138,7 @@ function SouOng() {
                     <input
                         type="text"
                         name="endereco"
-                        placeholder="Digite o endereço"
+                        placeholder="Endereço da ONG"
                         value={formData.endereco}
                         onChange={handleChange}
                         required
@@ -146,7 +146,7 @@ function SouOng() {
                     <input
                         type="text"
                         name="descricao"
-                        placeholder="Digite uma breve descrição sobre a ONG"
+                        placeholder="Escreva uma breve descrição sobre a ONG"
                         value={formData.descricao}
                         onChange={handleChange}
                         required
@@ -199,7 +199,7 @@ function SouOng() {
 
             {showPetForm && (
                 <div className="form-card">
-                    <h2 className="section-title">Cadastre seu pet</h2>
+                    <h2 className="section-title">Informações sobre o PET</h2>
                     <form onSubmit={handlePetSubmit}>
                         <input
                             type="text"
@@ -213,7 +213,7 @@ function SouOng() {
                         <input
                             type="text"
                             name="especie"
-                            placeholder="Espécie do pet (Cachorro, Gato, etc.)"
+                            placeholder="Espécie (Cachorro, Gato, etc.)"
                             value={petData.especie}
                             onChange={handlePetChange}
                             required
@@ -222,7 +222,7 @@ function SouOng() {
                         <input
                             type="text"
                             name="raca"
-                            placeholder="Raça do pet (Golden, Lhasa, etc.)"
+                            placeholder="Raça (Golden, Lhasa, etc.)"
                             value={petData.raca}
                             onChange={handlePetChange}
                             required
@@ -231,7 +231,7 @@ function SouOng() {
                         <input
                             type="text"
                             name="idadePet"
-                            placeholder="Idade do pet"
+                            placeholder="Idade"
                             value={petData.idadePet}
                             onChange={handlePetChange}
                             required
@@ -239,7 +239,7 @@ function SouOng() {
                         <input
                             type="text"
                             name="generoPet"
-                            placeholder="Gênero do pet"
+                            placeholder="Gênero"
                             value={petData.generoPet}
                             onChange={handlePetChange}
                             required

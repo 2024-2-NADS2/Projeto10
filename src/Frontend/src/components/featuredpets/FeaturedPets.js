@@ -1,7 +1,5 @@
-// src/components/FeaturedPets/FeaturedPets.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-//import './formularioadocao';
 import './FeaturedPets.css';
 
 function FeaturedPets() {
