@@ -22,23 +22,23 @@ const LoginCadastro = () => {
       // Envia o e-mail e senha para o backend na rota /login
       const response = await api.post("usuarios/login", { email, senha });
 
-
       if (response.data.message === "Login realizado com sucesso!") {
         // Se login for bem-sucedido, armazenar o token no localStorage
 
         const token = response.data.token;
         localStorage.setItem("authToken", token);
 
-        // Redirecionar para a lista de animais ou página do usuário
+        // Redirecionar para a lista de animais
         navigate("/lista-animais");
-      } else {
-        // Exibe a mensagem de erro se o login falhar
-        setErro(response.data.message || "Erro ao fazer login.");
       }
     } catch (error) {
-      // Caso haja algum erro de rede ou no servidor
-      console.error("Erro durante o login:", error);
-      setErro("Erro no servidor. Tente novamente mais tarde.");
+      // Captura e exibe mensagens de erro do backend
+      if (error.response && error.response.data && error.response.data.message) {
+        setErro(error.response.data.message);
+      } else {
+        // Exibe erro genérico para problemas de conexão ou servidor
+        setErro("Erro no servidor. Tente novamente mais tarde.");
+      }
     }
   };
 
