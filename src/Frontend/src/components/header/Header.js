@@ -34,7 +34,7 @@ function Header() {
                 </Link>
               </div>
               <div className="login cadastreseupet">
-                <Link to="/sou-ong">
+                <Link to="/CrieSeuPet">
                   <span role="img" aria-label="gato">🐱</span> Cadastre seu Pet
                 </Link>
               </div>
