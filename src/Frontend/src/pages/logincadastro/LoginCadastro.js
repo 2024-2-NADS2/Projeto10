@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "../../services/UserContext"; // Importa o UserContext
 import api from "../../services/api"; // Configuração do Axios para interagir com o backend
 import "./LoginCadastro.css";
 
 const LoginCadastro = () => {
   const navigate = useNavigate();
+  const { setUser } = useContext(UserContext); // Usa o contexto do usuário para atualizar o estado global
   const [email, setEmail] = useState(""); // Estado para o e-mail
   const [senha, setSenha] = useState(""); // Estado para a senha
   const [erro, setErro] = useState("");  // Estado para mensagem de erro
@@ -24,12 +26,18 @@ const LoginCadastro = () => {
 
       if (response.data.message === "Login realizado com sucesso!") {
         // Se login for bem-sucedido, armazenar o token no localStorage
-
         const token = response.data.token;
+        const nomeUsuario = response.data.nomeUsuario; // Assume que o backend retorna o nome do usuário
         localStorage.setItem("authToken", token);
 
-        // Redirecionar para a lista de animais
-        navigate("/lista-animais");
+        // Atualiza o estado global com o nome do usuário
+        setUser({
+          nome: nomeUsuario,
+          isLoggedIn: true,
+        });
+
+        // Redirecionar para a página inicial
+        navigate("/");
       }
     } catch (error) {
       // Captura e exibe mensagens de erro do backend
@@ -87,9 +95,7 @@ const LoginCadastro = () => {
           <p>Junte-se a nós e ajude a transformar a vida de um bichinho! Cada adoção é uma nova chance.</p>
           <button
             className="register-button"
-
             onClick={() => navigate("/crie-sua-conta")}  // redireciona para a tela de cadastro
- 
           >
             Criar minha conta
           </button>
