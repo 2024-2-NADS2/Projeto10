@@ -5,28 +5,30 @@ import "./LoginCadastro.css";
 
 const LoginCadastro = () => {
   const navigate = useNavigate();
-  const [email, setEmail] = useState("");
-  const [senha, setSenha] = useState("");
-  const [erro, setErro] = useState("");
+  const [email, setEmail] = useState("");  // Estado para o e-mail
+  const [senha, setSenha] = useState("");  // Estado para a senha
+  const [erro, setErro] = useState("");   // Estado para mensagem de erro
 
-  const handleLogin = async () => {
+  const handleLogin = async (e) => {
+    e.preventDefault();  // Evita o envio tradicional do formulário
+
     try {
-      const response = await api.post("/login", { email, senha });
-      
-      // Verifique a resposta do backend
-      if (response.data.success) {
-        // Supondo que o token seja retornado
-        const token = response.data.token;
+      // Envia o e-mail e senha para o backend na rota /login
+      const response = await api.post("usuarios/login", { email, senha });
 
-        // Salvar o token no localStorage (ou outro local seguro)
+      if (response.data.success) {
+        // Se login for bem-sucedido, armazenar o token no localStorage
+        const token = response.data.token;
         localStorage.setItem("authToken", token);
 
-        // Redirecionar para outra página (ex.: lista de animais)
+        // Redirecionar para a lista de animais ou página do usuário
         navigate("/lista-animais");
       } else {
+        // Exibe a mensagem de erro se o login falhar
         setErro(response.data.message || "Erro ao fazer login.");
       }
     } catch (error) {
+      // Caso haja algum erro de rede ou no servidor
       console.error("Erro durante o login:", error);
       setErro("Erro no servidor. Tente novamente mais tarde.");
     }
@@ -36,22 +38,17 @@ const LoginCadastro = () => {
     <div className="login-cadastro-container">
       <h2>ACESSAR OU CRIAR CONTA</h2>
       <div className="login-cadastro-box">
-        {/* sessão de login */}
+        {/* Sessão de Login */}
         <div className="login-section">
           <h3>Acesse sua Conta</h3>
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              handleLogin();
-            }}
-          >
+          <form onSubmit={handleLogin}>
             <label htmlFor="email">E-mail</label>
             <input
               type="text"
               id="email"
               placeholder="Digite seu e-mail"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => setEmail(e.target.value)} // Atualiza o estado do email
             />
             <label htmlFor="senha">Senha</label>
             <input
@@ -59,16 +56,16 @@ const LoginCadastro = () => {
               id="senha"
               placeholder="Digite sua senha de acesso"
               value={senha}
-              onChange={(e) => setSenha(e.target.value)}
+              onChange={(e) => setSenha(e.target.value)} // Atualiza o estado da senha
             />
             <button type="submit" className="login-button">
               Entrar
             </button>
           </form>
-          {erro && <p className="error-message">{erro}</p>}
+          {erro && <p className="error-message">{erro}</p>} {/* Exibe erro se ocorrer */}
         </div>
 
-        {/* sessão de "criar minha conta" */}
+        {/* Sessão de "Criar Minha Conta" */}
         <div className="register-section">
           <h3>Criar uma conta é rápido, fácil e gratuito!</h3>
           <p>
@@ -82,7 +79,7 @@ const LoginCadastro = () => {
           <p>Junte-se a nós e ajude a transformar a vida de um bichinho! Cada adoção é uma nova chance.</p>
           <button
             className="register-button"
-            onClick={() => navigate("/crie-sua-conta")}
+            onClick={() => navigate("/crie-sua-conta")}  // Redireciona para a tela de cadastro
           >
             Criar minha conta
           </button>
