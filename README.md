@@ -79,103 +79,73 @@ Para abrir este projeto você necessita das seguintes ferramentas:
 |-->Sqlite3
 
 ## 🚀 Processo de instalação
-1. Instale o Node.js
-Acesse nodejs.org e baixe a versão recomendada para seu sistema operacional. A instalação do Node inclui o npm, o gerenciador de pacotes que você usará para instalar o React.
 
-2.Crie seu Projeto em React
+1️⃣ Instale o Node.js
+Acesse Node.js e baixe a versão recomendada para o seu sistema operacional. A instalação do Node.js inclui o npm, o gerenciador de pacotes que será utilizado nas próximas etapas.
+
+2️⃣ Criando um Projeto em React
+Crie o projeto
 Abra o terminal e navegue até a pasta onde deseja criar o projeto. Execute o comando:
+npx create-react-app nome-do-projeto  
 
-npx create-react-app nome-do-projeto
+Esse comando configura automaticamente a estrutura inicial de um projeto React.
 
-Esse comando irá configurar uma estrutura inicial para o seu projeto em React.
-
-3.Inicie o Servidor de Desenvolvimento
-Depois que o projeto for criado, entre na pasta do projeto:
-
-cd nome-do-projeto
-
+Inicie o servidor de desenvolvimento
+Após a criação do projeto, entre na pasta:
+cd nome-do-projeto  
 Inicie o servidor de desenvolvimento com:
-npm start
+npm start  
+O projeto será aberto automaticamente no navegador em http://localhost:3000.
 
-O React abrirá automaticamente o projeto no navegador em http://localhost:3000, onde você poderá ver a aplicação funcionando.
-
-
+3️⃣ Configurando o Express
 O Express é um framework para o Node.js que facilita a criação de aplicações web e APIs.
-1. Instalar o Express
-Use o npm para instalar o Express:
 
-
-npm install express
-
-2. Criar o servidor Express
-Crie um arquivo, por exemplo, index.js, e adicione o seguinte código:
-
+Instale o Express
+No terminal, execute:
+npm install express  
+Crie o servidor Express
+Crie um arquivo chamado index.js e adicione o seguinte código:
 
 javascript
+const express = require('express');  
+const app = express();  
 
+app.get('/', (req, res) => {  
+    res.send('Hello, World!');  
+});  
 
-const express = require('express');
-const app = express();
+app.listen(3000, () => {  
+    console.log('Servidor rodando na porta 3000');  
+});  
+Execute o servidor
+No terminal, execute:
+node index.js  
+Agora, o servidor Express estará rodando na porta 3000.
 
-app.get('/', (req, res) => {
-  res.send('Hello, World!');
-});
+4️⃣ Utilizando o Nodemon
+O Nodemon é uma ferramenta que reinicia automaticamente o servidor sempre que detecta mudanças nos arquivos.
 
-app.listen(3000, () => {
-  console.log('Servidor rodando na porta 3000');
-});
+Instale o Nodemon
+npm install -g nodemon  
+Para instalação local no projeto:
+npm install nodemon  
+Execute o servidor com o Nodemon
+Com o Nodemon instalado globalmente, inicie o servidor com:
+nodemon index.js  
 
+5️⃣ Configurando o Axios
+O Axios é uma biblioteca para realizar requisições HTTP, como GET, POST, PUT e DELETE.
 
-3. Rodar o servidor
-No terminal, execute o comando:
+Instale o Axios
+No terminal, execute:
+npm install axios  
 
+6️⃣ Configurando o SQLite3
+O SQLite3 é uma biblioteca leve para banco de dados SQL, ideal para projetos que não exigem um servidor de banco de dados separado.
 
-
-node index.js
-Agora, seu servidor Express está rodando na porta 3000. 
-
-
-O Nodemon é uma ferramenta que facilita o desenvolvimento de aplicações Node.js, monitorando automaticamente as mudanças nos arquivos do seu projeto e reiniciando o servidor sempre que uma modificação é detectada.
-
-Instalar o Nodemon: Você pode instalar o Nodemon globalmente ou localmente no seu projeto.
-
-
-1.Para instalação global (disponível em qualquer lugar):
-
-
-
-npm install -g nodemon
-
-
-2.globalmente basta rodar seu aplicativo com o comando:
-
-
-nodemon index.js
-
-
-3.E então rodar com:
-
-
-npm run dev
-
-
-O Axios é uma biblioteca JavaScript que permite fazer requisições HTTP (como GET, POST, PUT, DELETE, etc.) de forma simples e eficiente.
-
-
-1.Como instalar o Axios
-Para usá-lo em um projeto Node.js, você precisa primeiro instalá-lo:
-
-
-npm install axios
-
-
-O SQLite3 é uma biblioteca de banco de dados relacional leve, que implementa um banco de dados SQL totalmente autossuficiente, sem necessidade de um servidor separado.
-1.Instalar o pacote SQLite3:
-
-
-npm install sqlite3
-
-
+Instale o SQLite3
+No terminal, execute:
+npm install sqlite3  
 
 ## 📋 Licença/License
 <p xmlns:cc="http://creativecommons.org/ns#" >Feito por Andreia Alaini Silva, Bruna Farias Pires, Guilherme Mendes Albuquerque e Luan Meireles Franchini - FECAP <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p>
