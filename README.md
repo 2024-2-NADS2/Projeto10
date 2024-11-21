@@ -58,13 +58,14 @@ O site está hospedado no NETLIFY. Para visualizar, clique aqui https://petherop
 ## 🎨 Figma
 Clique no link para ter acesso ao Figma da Pet Hero: <a href="https://www.figma.com/design/LOzkfRIS5qGdcnKGuShdS6/GUIA-DE-ESTILO?node-id=0-1&node-type=canvas&t=niS7wcun9wPuSQAZ-0">Figma</a>
 
-## 💻 Requesitos do sistema 
-HTML
-CSS
-JavaScript
-React
-Node.js
-SQL
+## 💻 Requisitos do Sistema
+
+- **HTML**
+- **CSS**
+- **JavaScript**
+- **React**
+- **Node.js**
+- **SQL**
 
 ## 💻 Configuração para Desenvolvimento
 Descreva como instalar todas as dependências para desenvolvimento e como rodar um test-suite automatizado de algum tipo. Se necessário, faça isso para múltiplas plataformas.
