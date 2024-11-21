@@ -1,31 +1,34 @@
-// src/pages/listaanimais/ListaAnimais.js
-import React, { useState } from 'react';
-import './ListaAnimais.css';
+import React, { useState, useEffect } from "react";
+import api from "../../services/api.js"; // Configuração do Axios para a API
+import "./ListaAnimais.css";
 
 const ListaAnimais = () => {
-    const animais = [
-        { id: 1, nome: 'Tob', idade: 3, genero: 'Macho', estado: 'SP', imagem: '/imagens/dog1.png' },
-        { id: 2, nome: 'Chiara', idade: 1, genero: 'Fêmea', estado: 'RJ', imagem: '/imagens/gato3.jpg' },
-        { id: 3, nome: 'Bobby', idade: 2, genero: 'Macho', estado: 'SP', imagem: '/imagens/dog2.jpg' },
-        { id: 4, nome: 'Nina', idade: 4, genero: 'Fêmea', estado: 'MG', imagem: '/imagens/gato2.jpg' },
-        { id: 5, nome: 'Max', idade: 3, genero: 'Macho', estado: 'RJ', imagem: '/imagens/dog4.png' },
-        { id: 6, nome: 'Luna', idade: 5, genero: 'Fêmea', estado: 'SP', imagem: '/imagens/dog5.png' },
-        { id: 7, nome: 'Rex', idade: 2, genero: 'Macho', estado: 'MG', imagem: '/imagens/dog6.png' },
-        { id: 8, nome: 'Bella', idade: 3, genero: 'Fêmea', estado: 'RJ', imagem: '/imagens/calopsita.png' },
-        { id: 9, nome: 'Mimi', idade: 1, genero: 'Fêmea', estado: 'SP', imagem: '/imagens/dog3.jpg' },
-    ];
+    const [animais, setAnimais] = useState([]); // Estado para armazenar os animais
+    const [filtroIdade, setFiltroIdade] = useState("");
+    const [filtroGenero, setFiltroGenero] = useState("");
+    const [filtroEstado, setFiltroEstado] = useState("");
 
-    // Estados para os filtros
-    const [filtroIdade, setFiltroIdade] = useState('');
-    const [filtroGenero, setFiltroGenero] = useState('');
-    const [filtroEstado, setFiltroEstado] = useState('');
+    // Busca os animais do backend ao carregar o componente
+    useEffect(() => {
+        const fetchAnimais = async () => {
+            try {
+                const response = await api.get("/animais"); // Ajuste para o endpoint correto
+                setAnimais(response.data);
+            } catch (error) {
+                console.error("Erro ao buscar animais:", error);
+                alert("Erro ao carregar a lista de animais. Tente novamente mais tarde.");
+            }
+        };
+
+        fetchAnimais();
+    }, []);
 
     // Filtra os animais com base nos critérios
     const animaisFiltrados = animais.filter((animal) => {
         return (
-            (filtroIdade === '' || animal.idade === parseInt(filtroIdade)) &&
-            (filtroGenero === '' || animal.genero === filtroGenero) &&
-            (filtroEstado === '' || animal.estado === filtroEstado)
+            (filtroIdade === "" || animal.idade === parseInt(filtroIdade)) &&
+            (filtroGenero === "" || animal.genero.toLowerCase() === filtroGenero.toLowerCase()) &&
+            (filtroEstado === "" || animal.estado.toLowerCase() === filtroEstado.toLowerCase())
         );
     });
 
@@ -80,11 +83,15 @@ const ListaAnimais = () => {
             <div className="lista-animais">
                 {animaisFiltrados.map((animal) => (
                     <div className="animal-card" key={animal.id}>
-                        <img src={animal.imagem} alt={animal.nome} className="pet-image"/>
+                        <img
+                            src={animal.imagem || "/imagens/default.png"} // Imagem padrão se nenhuma for fornecida
+                            alt={animal.nome}
+                            className="pet-image"
+                        />
                         <h4>Nome: {animal.nome}</h4>
                         <p>Idade: {animal.idade} anos</p>
                         <p>Gênero: {animal.genero}</p>
-                        <p>Estado: {animal.estado}</p>
+                        <p>Estado: {animal.estado || "Não informado"}</p>
                     </div>
                 ))}
             </div>

@@ -16,13 +16,18 @@ function Header() {
                     {/* botão de Entrar/Cadastrar-se */}
                     <div className="login">
                         <Link to="/login-cadastro">
-                            <span role="img" aria-label="paw">🐾</span> Entrar/Cadastrar-se
+                            <span role="img" aria-label="paw">🐾</span> Faça seu Login / Cadastro Usuario
                         </Link>
                     </div>
                     {/* Botão Sou ONG */}
                     <div className="login sou-ong">
                         <Link to="/sou-ong">
-                            <span role="img" aria-label="building">🏢</span> Sou ONG
+                            <span role="img" aria-label="building">🏢</span> Cadastre sua Ong
+                        </Link>
+                    </div>
+                    <div className="login cadastreseupet">
+                        <Link to="/sou-ong">
+                            <span role="img" aria-label="building">🏢</span> Cadastre seu Pet
                         </Link>
                     </div>
                 </div>

@@ -76,8 +76,21 @@
     justify-content: center; /* texto centralizado */
     transition: background-color 0.3s;
 }
+.header .login-buttons .cadastreseupet a {
+    color: #1E4E58;
+    background-color: #B2DFDB;
+    padding: 10px 20px; /* mesmo tamanho do botão de login */
+    border-radius: 5px; /* mesmo arredondamento */
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center; /* texto centralizado */
+    transition: background-color 0.3s;
+}
 
-.header .login-buttons .sou-ong a:hover {
+.header .login-buttons .cadastreseupet a:hover {
     background-color: #80CBC4;
     text-decoration: none;
 }

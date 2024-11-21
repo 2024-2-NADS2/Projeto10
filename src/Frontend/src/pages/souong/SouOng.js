@@ -27,19 +27,19 @@ function SouOng() {
     const [showPetForm, setShowPetForm] = useState(false);
     const [showSubmitButton, setShowSubmitButton] = useState(false);
 
-    // atualiza os valores do formulário principal
+    // Atualiza os valores do formulário principal
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prevState) => ({ ...prevState, [name]: value }));
     };
 
-    // atualiza os valores do formulário de pet
+    // Atualiza os valores do formulário de pet
     const handlePetChange = (e) => {
         const { name, value } = e.target;
         setPetData((prevState) => ({ ...prevState, [name]: value }));
     };
 
-    // função pra enviar os dados ao backend (ONG)
+    // Função para enviar os dados ao backend (ONG)
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -48,6 +48,12 @@ function SouOng() {
         // Valida se as senhas coincidem
         if (senha !== confirmarSenha) {
             alert("As senhas não coincidem. Tente novamente.");
+            return;
+        }
+
+        // Valida comprimento mínimo da senha
+        if (senha.length < 6) {
+            alert("A senha deve ter pelo menos 6 caracteres.");
             return;
         }
 
@@ -61,15 +67,26 @@ function SouOng() {
                 senha,
             });
 
-            console.log("ONG cadastrada com sucesso:", response.data);
             alert("Cadastro realizado com sucesso!");
+            console.log("ONG cadastrada com sucesso:", response.data);
+
+            // Limpa os campos do formulário
+            setFormData({
+                nome: "",
+                email: "",
+                telefone: "",
+                endereco: "",
+                descricao: "",
+                senha: "",
+                confirmarSenha: "",
+            });
         } catch (error) {
-            console.error("Erro ao cadastrar ONG:", error);
-            alert("Erro ao realizar o cadastro. Tente novamente.");
+            console.error("Erro ao cadastrar ONG:", error.response?.data?.error || error.message);
+            alert(`Erro ao realizar o cadastro: ${error.response?.data?.error || "Tente novamente."}`);
         }
     };
 
-    // função pra enviar os dados do formulário de pet
+    // Função para enviar os dados do formulário de pet
     const handlePetSubmit = async (e) => {
         e.preventDefault();
 
@@ -78,27 +95,43 @@ function SouOng() {
 
             const response = await api.post("/pets", {
                 nome: nomePet,
-                idade: idadePet,
                 especie,
-                raca,
-                generoPet,
+                raca: raca || null,
+                idade: idadePet || null,
+                genero: generoPet || null,
                 vacinado,
                 castrado,
-                descricaoPet,
+                descricao: descricaoPet || null,
             });
 
-            console.log("Pet cadastrado com sucesso:", response.data);
             alert("Pet cadastrado com sucesso!");
+            console.log("Pet cadastrado com sucesso:", response.data);
+
+            // Limpa os campos do formulário
+            setPetData({
+                nomePet: "",
+                especie: "",
+                raca: "",
+                idadePet: "",
+                generoPet: "",
+                vacinado: "",
+                castrado: "",
+                descricaoPet: "",
+            });
         } catch (error) {
-            console.error("Erro ao cadastrar pet:", error);
-            alert("Erro ao realizar o cadastro do pet. Tente novamente.");
+            console.error("Erro ao cadastrar pet:", error.response?.data?.error || error.message);
+            alert(`Erro ao realizar o cadastro do pet: ${error.response?.data?.error || "Tente novamente."}`);
         }
     };
 
+    // Alterna entre exibir ou não o formulário de pet
     const handlePetFormToggle = (response) => {
         if (response === "yes") {
-            setShowPetForm(true);
-            setShowSubmitButton(false);
+            const confirm = window.confirm("Você finalizou os dados da ONG? Se não, clique em 'Não'.");
+            if (confirm) {
+                setShowPetForm(true);
+                setShowSubmitButton(false);
+            }
         } else {
             setShowPetForm(false);
             setShowSubmitButton(true);
@@ -151,7 +184,6 @@ function SouOng() {
                         onChange={handleChange}
                         required
                     />
-                    {/* esse eh o campo da senha */}
                     <input
                         type="password"
                         name="senha"
@@ -209,7 +241,6 @@ function SouOng() {
                             onChange={handlePetChange}
                             required
                         />
-                        
                         <input
                             type="text"
                             name="especie"
@@ -218,23 +249,19 @@ function SouOng() {
                             onChange={handlePetChange}
                             required
                         />
-                        
                         <input
                             type="text"
                             name="raca"
                             placeholder="Raça (Golden, Lhasa, etc.)"
                             value={petData.raca}
                             onChange={handlePetChange}
-                            required
                         />
-
                         <input
                             type="text"
                             name="idadePet"
                             placeholder="Idade"
                             value={petData.idadePet}
                             onChange={handlePetChange}
-                            required
                         />
                         <input
                             type="text"
@@ -242,36 +269,26 @@ function SouOng() {
                             placeholder="Gênero"
                             value={petData.generoPet}
                             onChange={handlePetChange}
-                            required
                         />
-
-                        <input
-                            type="text"
-                            name="vacinado"
-                            placeholder="O pet é vacinado? responda com SIM ou NÃO"
-                            value={petData.vacinado}
-                            onChange={handlePetChange}
-                            required
-                        />
-
-                        <input
-                            type="text"
-                            name="castrado"
-                            placeholder="O pet é castrado? responda com SIM ou NÃO"
-                            value={petData.castrado}
-                            onChange={handlePetChange}
-                            required
-                        />
-
+                        <label>O pet é vacinado?</label>
+                        <select name="vacinado" value={petData.vacinado} onChange={handlePetChange} required>
+                            <option value="">Selecione</option>
+                            <option value="SIM">Sim</option>
+                            <option value="NÃO">Não</option>
+                        </select>
+                        <label>O pet é castrado?</label>
+                        <select name="castrado" value={petData.castrado} onChange={handlePetChange} required>
+                            <option value="">Selecione</option>
+                            <option value="SIM">Sim</option>
+                            <option value="NÃO">Não</option>
+                        </select>
                         <input
                             type="text"
                             name="descricaoPet"
                             placeholder="Escreva uma breve descrição sobre o pet"
                             value={petData.descricaoPet}
                             onChange={handlePetChange}
-                            required
                         />
-
                         <button type="submit" className="submit-button">
                             Cadastrar Pet
                         </button>

@@ -1,0 +1,73 @@
+.crie-seu-pet-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #e8f8f7;
+  height: 100vh;
+  font-family: 'Arial', sans-serif;
+  padding: 20px; 
+}
+
+h2 {
+  color: #69a19b;
+  font-size: 24px;
+  margin: 30px 0 20px; /* espaçamento superior e inferior */
+  text-align: center;
+  line-height: 1.4; /* espaçamento entre as linhas */
+}
+
+.form-box {
+  background-color: #d9f0ec;
+  border-radius: 15px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h3 {
+  color: #004d40;
+  margin-bottom: 9px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
+  border: 1px solid #69a19b;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.finalizar-button {
+  background-color: #1fa078;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.finalizar-button:hover {
+  background-color: #178f68;
+}
+
+/* ajuste pra telas menores (responsividade) */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 20px; /* diminui tamanho da fonte para telas menores */
+    margin: 20px 0 15px; /* diminui o espaçamento */
+  }
+
+  .form-box {
+    width: 90%; /* arruma a largura do formulário pra caber em telas pequenas */
+    padding: 15px;
+  }
+
+  input, .finalizar-button {
+    font-size: 14px; /* essa parte reduz o tamanho dos campos e botões */
+  }
+}
