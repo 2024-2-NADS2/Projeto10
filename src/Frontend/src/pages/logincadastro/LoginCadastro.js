@@ -22,8 +22,9 @@ const LoginCadastro = () => {
       // Envia o e-mail e senha para o backend na rota /login
       const response = await api.post("usuarios/login", { email, senha });
 
-      // Login bem-sucedido
       if (response.data.message === "Login realizado com sucesso!") {
+        // Se login for bem-sucedido, armazenar o token no localStorage
+
         const token = response.data.token;
         localStorage.setItem("authToken", token);
 
@@ -86,7 +87,9 @@ const LoginCadastro = () => {
           <p>Junte-se a nós e ajude a transformar a vida de um bichinho! Cada adoção é uma nova chance.</p>
           <button
             className="register-button"
-            onClick={() => navigate("/crie-sua-conta")} // Redireciona para a tela de cadastro
+
+            onClick={() => navigate("/crie-sua-conta")}  // redireciona para a tela de cadastro
+ 
           >
             Criar minha conta
           </button>
