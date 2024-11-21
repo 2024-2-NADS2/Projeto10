@@ -113,8 +113,7 @@ No terminal, execute:
 npm install express  
 Crie o servidor Express
 Crie um arquivo chamado index.js e adicione o seguinte código:
-
-javascript
+```
 const express = require('express');  
 const app = express();  
 
@@ -124,7 +123,9 @@ app.get('/', (req, res) => {
 
 app.listen(3000, () => {  
     console.log('Servidor rodando na porta 3000');  
-});  
+});
+  
+```
 Execute o servidor
 No terminal, execute:
 node index.js  
@@ -146,7 +147,7 @@ O Axios é uma biblioteca para realizar requisições HTTP, como GET, POST, PUT 
 
 Instale o Axios
 No terminal, execute:
-*npm install axios*
+npm install axios
 
 6️⃣ Configurando o SQLite3
 O SQLite3 é uma biblioteca leve para banco de dados SQL, ideal para projetos que não exigem um servidor de banco de dados separado.
