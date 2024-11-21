@@ -85,7 +85,7 @@ const ListaAnimais = () => {
                 {animaisFiltrados.map((animal) => (
                     <div className="animal-card" key={animal.id}>
                         <img
-                            src={animal.imagem || "/imagens/dog1.png"} // Imagem padrão se nenhuma for fornecida
+                            src={animal.imagem || "/imagens/sem-imagem.jpg"} // Imagem padrão se nenhuma for fornecida
                             alt={animal.nome}
                             className="pet-image"
                         />
