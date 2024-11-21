@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { UserContext } from "../../services/UserContext"; // Importa o UserContext
-import api from "../../services/api"; // Configuração do Axios para interagir com o backend
+import { UserContext } from "../../services/UserContext"; // importa o UserContext
+import api from "../../services/api"; // configuração do Axios para interagir com o backend
 import "./LoginCadastro.css";
 
 const LoginCadastro = () => {
@@ -12,9 +12,9 @@ const LoginCadastro = () => {
   const [erro, setErro] = useState("");  // Estado para mensagem de erro
 
   const handleLogin = async (e) => {
-    e.preventDefault(); // Evita o envio tradicional do formulário
+    e.preventDefault(); // evita o envio tradicional do formulário
 
-    // Validação simples para verificar se os campos foram preenchidos
+    // validação simples para verificar se os campos foram preenchidos
     if (!email || !senha) {
       setErro("Por favor, preencha todos os campos.");
       return;

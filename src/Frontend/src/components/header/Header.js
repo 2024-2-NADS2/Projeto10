@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { UserContext } from '../../services/UserContext'; // Importa o contexto
+import { UserContext } from '../../services/UserContext'; // importa o contexto
 import './Header.css';
 
 function Header() {
-  const { user } = useContext(UserContext); // Obtém o usuário do contexto
+  const { user } = useContext(UserContext); // obtém o usuário do contexto
 
   return (
     <header className="header">
@@ -16,12 +16,12 @@ function Header() {
         </div>
 
         <div className="login-buttons">
-          {user ? ( // Se o usuário estiver logado
+          {user ? ( // se o usuário estiver logado
             <div className="welcome-message">
               <span role="img" aria-label="paw">🐾</span> Olá, {user.nome}! Seja bem-vindo
             </div>
           ) : (
-            // Caso contrário, exibe os botões normais
+            // caso contrário, exibe os botões normais
             <>
               <div className="login">
                 <Link to="/login-cadastro">
