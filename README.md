@@ -69,6 +69,7 @@ Clique no link para ter acesso ao Figma da Pet Hero: <a href="https://www.figma.
 
 ## 💻 Configuração para Desenvolvimento
 Este projeto requer a instalação de algumas ferramentas e dependências para o ambiente de desenvolvimento. Certifique-se de ter todas elas configuradas antes de iniciar.
+
 🔧 Ferramentas Necessárias
 
 - **Node.js**
@@ -109,7 +110,7 @@ O Express é um framework para o Node.js que facilita a criação de aplicaçõe
 
 Instale o Express
 No terminal, execute:
-''' npm install express  
+npm install express  
 Crie o servidor Express
 Crie um arquivo chamado index.js e adicione o seguinte código:
 
