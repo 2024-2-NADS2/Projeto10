@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import api from "../../services/api.js"; // Importa a configuração do Axios
 import "./CrieSeuPet.css";
 
 function CrieSeuPet() {
   // Estado para armazenar os dados do pet
   const [petData, setPetData] = useState({
-    nome: "",    
+    nome: "",
     especie: "",
     raca: "",
     idade: "",
@@ -24,14 +25,38 @@ function CrieSeuPet() {
   };
 
   // Função para envio do formulário
-  const handlePetSubmit = (e) => {
+  const handlePetSubmit = async (e) => {
     e.preventDefault();
-    // Aqui você pode enviar os dados do pet para o backend
-    console.log("Dados do pet enviados:", petData);
-    alert("Dados do pet enviados com sucesso!");
-    // Limpa o formulário após o envio
-    setPetData({
-        nome: "",    
+
+    try {
+      // Preparação dos dados para envio ao backend
+      const response = await api.post(
+        "/animais",
+        {
+          nome: petData.nome,
+          especie: petData.especie,
+          raca: petData.raca || null,
+          idade: parseInt(petData.idade) || null, // Convertendo idade para número
+          sexo: petData.genero || null,
+          vacinado: petData.vacinado.toUpperCase() === "SIM",
+          castrado: petData.castrado.toUpperCase() === "SIM",
+          descricao: petData.descricao || null,
+          ong_responsavel_id: 1, // Substitua pelo ID real da ONG
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("authToken")}`, // Token de autenticação
+          },
+        }
+      );
+
+      // Mensagem de sucesso
+      alert("Pet cadastrado com sucesso!");
+      console.log("Pet cadastrado com sucesso:", response.data);
+
+      // Limpa o formulário após o envio
+      setPetData({
+        nome: "",
         especie: "",
         raca: "",
         idade: "",
@@ -39,11 +64,16 @@ function CrieSeuPet() {
         vacinado: "",
         castrado: "",
         descricao: "",
-    });
+      });
+    } catch (error) {
+      // Mensagem de erro
+      console.error("Erro ao cadastrar pet:", error.response?.data?.error || error.message);
+      alert(`Erro ao realizar o cadastro do pet: ${error.response?.data?.error || "Tente novamente."}`);
+    }
   };
 
   return (
-    <div className="crie-seu-pet-container" style={{ marginBottom: '80px' }}>
+    <div className="crie-seu-pet-container" style={{ marginBottom: "80px" }}>
       <h2>Cadastre um Pet para Adoção</h2>
       <form onSubmit={handlePetSubmit} className="crie-seu-pet-form">
         <label>
@@ -57,7 +87,7 @@ function CrieSeuPet() {
             required
           />
         </label>
-        
+
         <label>
           Espécie:
           <input
@@ -65,7 +95,7 @@ function CrieSeuPet() {
             name="especie"
             value={petData.especie}
             onChange={handlePetChange}
-            placeholder="Digite a especie do pet"
+            placeholder="Digite a espécie do pet"
             required
           />
         </label>
@@ -90,10 +120,20 @@ function CrieSeuPet() {
             value={petData.raca}
             onChange={handlePetChange}
             placeholder="Digite a raça do pet"
-            required
           />
-
         </label>
+
+        <label>
+          Gênero:
+          <input
+            type="text"
+            name="genero"
+            value={petData.genero}
+            onChange={handlePetChange}
+            placeholder="Digite o gênero do pet"
+          />
+        </label>
+
         <label>
           Vacinado:
           <input
@@ -104,6 +144,7 @@ function CrieSeuPet() {
             placeholder="Seu pet é vacinado? (SIM ou NÃO)"
           />
         </label>
+
         <label>
           Castrado:
           <input
@@ -114,6 +155,7 @@ function CrieSeuPet() {
             placeholder="Seu pet é castrado? (SIM ou NÃO)"
           />
         </label>
+
         <label>
           Descrição:
           <textarea
@@ -121,9 +163,9 @@ function CrieSeuPet() {
             value={petData.descricao}
             onChange={handlePetChange}
             placeholder="Digite uma descrição do pet"
-            required
           ></textarea>
         </label>
+
         <button type="submit">Cadastrar Pet</button>
       </form>
     </div>
