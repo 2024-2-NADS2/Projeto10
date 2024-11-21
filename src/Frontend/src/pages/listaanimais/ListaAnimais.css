@@ -48,7 +48,7 @@
 
 .animal-card {
     width: 5cm;
-    height: 8cm;
+    height: 11cm;
     background-color: #229C88;
     color: #fff;
     border-radius: 8px;
@@ -71,7 +71,7 @@
 
 .animal-card h4,
 .animal-card p {
-    font-size: 14px; /* reduz o tamanho da fonte */
+    font-size: 13px; /* reduz o tamanho da fonte */
     margin: 5px 0; /* reduz as margens entre textos */
 }
 
