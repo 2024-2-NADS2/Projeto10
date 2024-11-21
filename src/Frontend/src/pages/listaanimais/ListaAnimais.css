@@ -88,15 +88,15 @@
     background-color: #1fa078;
     color: white;
     padding: 10px 15px;
-    border-radius: 5px;
+    border-radius: 15px;
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-.adopt-button:hover {
-    background-color: #178f68;
+.adopt-button {
+    background-color: #1E4E58;
 }
 
 .paw-icon-button {

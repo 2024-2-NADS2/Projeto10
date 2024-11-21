@@ -49,7 +49,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #80cbc4;
+    background-color: #1E4E58;
     color: #ffffff;
     text-decoration: none;
     font-size: 14px;
@@ -63,7 +63,7 @@
 }
 
 .adopt-button:hover {
-    background-color: #66b2a4;
+    background-color: #78aaaa;
     transform: translateY(-2px);
 }
 
