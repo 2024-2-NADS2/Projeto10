@@ -146,8 +146,9 @@ O Axios é uma biblioteca para realizar requisições HTTP, como GET, POST, PUT 
 
 Instale o Axios
 No terminal, execute:
+'''
 npm install axios  
-
+'''
 6️⃣ Configurando o SQLite3
 O SQLite3 é uma biblioteca leve para banco de dados SQL, ideal para projetos que não exigem um servidor de banco de dados separado.
 
