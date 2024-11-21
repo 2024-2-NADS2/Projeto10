@@ -1,78 +1,133 @@
-import React from 'react';
-import './CrieSeuPet.css';
+import React, { useState } from "react";
+import "./CrieSeuPet.css";
 
-const CrieSeuPet = () => {
+function CrieSeuPet() {
+  // Estado para armazenar os dados do pet
+  const [petData, setPetData] = useState({
+    nome: "",    
+    especie: "",
+    raca: "",
+    idade: "",
+    genero: "",
+    vacinado: "",
+    castrado: "",
+    descricao: "",
+  });
+
+  // Função para lidar com mudanças nos campos do formulário
+  const handlePetChange = (e) => {
+    const { name, value } = e.target;
+    setPetData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  // Função para envio do formulário
+  const handlePetSubmit = (e) => {
+    e.preventDefault();
+    // Aqui você pode enviar os dados do pet para o backend
+    console.log("Dados do pet enviados:", petData);
+    alert("Dados do pet enviados com sucesso!");
+    // Limpa o formulário após o envio
+    setPetData({
+        nome: "",    
+        especie: "",
+        raca: "",
+        idade: "",
+        genero: "",
+        vacinado: "",
+        castrado: "",
+        descricao: "",
+    });
+  };
+
   return (
-    <div className="form-card">
-    <h2 className="section-title">Informações sobre o PET</h2>
-    <form onSubmit={handlePetSubmit}>
-        <input
+    <div className="crie-seu-pet-container" style={{ marginBottom: '80px' }}>
+      <h2>Cadastre um Pet para Adoção</h2>
+      <form onSubmit={handlePetSubmit} className="crie-seu-pet-form">
+        <label>
+          Nome do Pet:
+          <input
             type="text"
-            name="nomePet"
-            placeholder="Nome do pet"
-            value={petData.nomePet}
+            name="nome"
+            value={petData.nome}
             onChange={handlePetChange}
+            placeholder="Digite o nome do pet"
             required
-        />
-        <input
+          />
+        </label>
+        
+        <label>
+          Espécie:
+          <input
             type="text"
             name="especie"
-            placeholder="Espécie (Cachorro, Gato, etc.)"
             value={petData.especie}
             onChange={handlePetChange}
+            placeholder="Digite a especie do pet"
             required
-        />
-        <input
+          />
+        </label>
+
+        <label>
+          Idade:
+          <input
+            type="number"
+            name="idade"
+            value={petData.idade}
+            onChange={handlePetChange}
+            placeholder="Digite a idade do pet"
+            required
+          />
+        </label>
+
+        <label>
+          Raça:
+          <input
             type="text"
             name="raca"
-            placeholder="Raça (Golden, Lhasa, etc.)"
             value={petData.raca}
             onChange={handlePetChange}
-        />
-        <input
-            type="text"
-            name="idadePet"
-            placeholder="Idade"
-            value={petData.idadePet}
-            onChange={handlePetChange}
-        />
-        <input
-            type="text"
-            name="generoPet"
-            placeholder="Gênero"
-            value={petData.generoPet}
-            onChange={handlePetChange}
-        />
+            placeholder="Digite a raça do pet"
+            required
+          />
 
-        <input
+        </label>
+        <label>
+          Vacinado:
+          <input
             type="text"
             name="vacinado"
-            placeholder="O pet é vacinado? (digite SIM ou NÃO)"
             value={petData.vacinado}
             onChange={handlePetChange}
-        />
-
-        <input
+            placeholder="Seu pet é vacinado? (SIM ou NÃO)"
+          />
+        </label>
+        <label>
+          Castrado:
+          <input
             type="text"
             name="castrado"
-            placeholder="O pet é castrado? (digite SIM ou NÃO)"
             value={petData.castrado}
             onChange={handlePetChange}
-        />
-
-        <input
-            type="text"
-            name="descricaoPet"
-            placeholder="Escreva uma breve descrição sobre o pet"
-            value={petData.descricaoPet}
+            placeholder="Seu pet é castrado? (SIM ou NÃO)"
+          />
+        </label>
+        <label>
+          Descrição:
+          <textarea
+            name="descricao"
+            value={petData.descricao}
             onChange={handlePetChange}
-        />
-        <button type="submit" className="submit-button">
-            Finalizar Cadastro
-        </button>
-    </form>
-</div>
+            placeholder="Digite uma descrição do pet"
+            required
+          ></textarea>
+        </label>
+        <button type="submit">Cadastrar Pet</button>
+      </form>
+    </div>
   );
-};
+}
 
 export default CrieSeuPet;

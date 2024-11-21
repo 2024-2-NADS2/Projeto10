@@ -12,6 +12,7 @@ import FormularioAdocao from './pages/formularioadocao/FormularioAdocao';
 import SobreNos from './pages/sobrenos/SobreNos';
 import ListaAnimais from './pages/listaanimais/ListaAnimais';
 import CrieSuaConta from './pages/criesuaconta/CrieSuaConta';
+import CrieSeuPet from './pages/cadastropet/CrieSeuPet';
 import DuvidasSobreAdocao from './pages/duvidassobreadocao/DuvidasSobreAdocao';
 import { UserProvider } from './services/UserContext'; // Importa o contexto
 import './App.css';
@@ -32,6 +33,8 @@ function App() {
                     <Route path="/login-cadastro" element={<LoginCadastro />} />
                     <Route path="/crie-sua-conta" element={<CrieSuaConta />} />
                     <Route path="/sou-ong" element={<SouOng />} />
+                    <Route path="/crie-seu-pet" element={<CrieSeuPet />} />
+
                     <Route path="/formulario-adocao" element={<FormularioAdocao />} />
                     <Route path="/sobre-nos" element={<SobreNos />} />
                     <Route path="/lista-animais" element={<ListaAnimais />} />
