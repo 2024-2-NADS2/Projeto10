@@ -90,6 +90,11 @@
     transition: background-color 0.3s;
 }
 
+.header .login-buttons .sou-ong a:hover {
+    background-color: #80CBC4;
+    text-decoration: none;
+}
+
 .header .login-buttons .cadastreseupet a:hover {
     background-color: #80CBC4;
     text-decoration: none;

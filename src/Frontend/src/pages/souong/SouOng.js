@@ -270,18 +270,23 @@ function SouOng() {
                             value={petData.generoPet}
                             onChange={handlePetChange}
                         />
-                        <label>O pet é vacinado?</label>
-                        <select name="vacinado" value={petData.vacinado} onChange={handlePetChange} required>
-                            <option value="">Selecione</option>
-                            <option value="SIM">Sim</option>
-                            <option value="NÃO">Não</option>
-                        </select>
-                        <label>O pet é castrado?</label>
-                        <select name="castrado" value={petData.castrado} onChange={handlePetChange} required>
-                            <option value="">Selecione</option>
-                            <option value="SIM">Sim</option>
-                            <option value="NÃO">Não</option>
-                        </select>
+
+                        <input
+                            type="text"
+                            name="vacinado"
+                            placeholder="O pet é vacinado? (digite SIM ou NÃO)"
+                            value={petData.vacinado}
+                            onChange={handlePetChange}
+                        />
+
+                        <input
+                            type="text"
+                            name="castrado"
+                            placeholder="O pet é castrado? (digite SIM ou NÃO)"
+                            value={petData.castrado}
+                            onChange={handlePetChange}
+                        />
+
                         <input
                             type="text"
                             name="descricaoPet"
@@ -290,7 +295,7 @@ function SouOng() {
                             onChange={handlePetChange}
                         />
                         <button type="submit" className="submit-button">
-                            Cadastrar Pet
+                            Finalizar Cadastro
                         </button>
                     </form>
                 </div>

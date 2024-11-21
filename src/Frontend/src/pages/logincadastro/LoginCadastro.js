@@ -58,7 +58,10 @@ const LoginCadastro = () => {
               value={senha}
               onChange={(e) => setSenha(e.target.value)} // Atualiza o estado da senha
             />
-            <button type="submit" className="login-button">
+            <button 
+              className="login-button"
+              onClick={() => navigate("/")}
+            >
               Entrar
             </button>
           </form>

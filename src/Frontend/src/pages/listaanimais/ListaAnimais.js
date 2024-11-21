@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from "react";
-import api from "../../services/api.js"; // Configuração do Axios para a API
+import { Link } from "react-router-dom";
+import api from "../../services/api.js"; // configuração do Axios para a API
 import "./ListaAnimais.css";
 
 const ListaAnimais = () => {
-    const [animais, setAnimais] = useState([]); // Estado para armazenar os animais
+    const [animais, setAnimais] = useState([]); // estado para armazenar os animais
     const [filtroIdade, setFiltroIdade] = useState("");
     const [filtroGenero, setFiltroGenero] = useState("");
     const [filtroEstado, setFiltroEstado] = useState("");
 
-    // Busca os animais do backend ao carregar o componente
+    // busca os animais do backend ao carregar o componente
     useEffect(() => {
         const fetchAnimais = async () => {
             try {
-                const response = await api.get("/animais"); // Ajuste para o endpoint correto
+                const response = await api.get("/animais"); // ajuste para o endpoint correto
                 setAnimais(response.data);
             } catch (error) {
                 console.error("Erro ao buscar animais:", error);
@@ -23,7 +24,7 @@ const ListaAnimais = () => {
         fetchAnimais();
     }, []);
 
-    // Filtra os animais com base nos critérios
+    // filtra os animais com base nos critérios
     const animaisFiltrados = animais.filter((animal) => {
         return (
             (filtroIdade === "" || animal.idade === parseInt(filtroIdade)) &&
@@ -34,7 +35,7 @@ const ListaAnimais = () => {
 
     return (
         <div className="lista-animais-container">
-            {/* Barra de Filtros */}
+            {/* barra de filtros */}
             <aside className="filtro">
                 <h3>Filtrar por:</h3>
                 <div>
@@ -79,7 +80,7 @@ const ListaAnimais = () => {
                 </div>
             </aside>
 
-            {/* Lista de Animais */}
+            {/* lista de animais */}
             <div className="lista-animais">
                 {animaisFiltrados.map((animal) => (
                     <div className="animal-card" key={animal.id}>
@@ -92,6 +93,16 @@ const ListaAnimais = () => {
                         <p>Idade: {animal.idade} anos</p>
                         <p>Gênero: {animal.genero}</p>
                         <p>Estado: {animal.estado || "Não informado"}</p>
+                        <div className="adopt-button-container">
+                            <Link to="/formulario-adocao" className="adopt-button">
+                                <img
+                                    src="/imagens/pata.png"
+                                    alt="Pata"
+                                    className="paw-icon-button"
+                                />
+                                <span>Quero Adotar</span>
+                            </Link>
+                        </div>
                     </div>
                 ))}
             </div>

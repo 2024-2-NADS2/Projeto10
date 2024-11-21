@@ -27,7 +27,7 @@ function Header() {
                     </div>
                     <div className="login cadastreseupet">
                         <Link to="/sou-ong">
-                            <span role="img" aria-label="building">🏢</span> Cadastre seu Pet
+                            <span role="img" aria-label="gato">🐱</span> Cadastre seu Pet
                         </Link>
                     </div>
                 </div>

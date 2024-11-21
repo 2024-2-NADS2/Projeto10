@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import api from "../../services/api"; // Certifique-se de ter configurado o Axios
+import api from "../../services/api"; 
 import "./CrieSuaConta.css";
 
 const CrieSuaConta = () => {
-  // States para armazenar os dados do formulário
+  // states para armazenar os dados do formulário
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [telefone, setTelefone] = useState("");
@@ -21,7 +21,7 @@ const CrieSuaConta = () => {
     }
 
     try {
-      // Envia os dados do formulário para o backend
+      // envia os dados do formulário para o backend
       const response = await api.post("/usuarios", {
         nome,
         email,
@@ -31,7 +31,7 @@ const CrieSuaConta = () => {
       });
 
       if (response.data.success) {
-        // Se o cadastro for bem-sucedido, redireciona o usuário ou exibe uma mensagem de sucesso
+        // se o cadastro for bem-sucedido, redireciona o usuário ou exibe uma mensagem de sucesso
         alert("Cadastro realizado com sucesso!");
       } else {
         setErro(response.data.message || "Erro ao criar conta.");
@@ -43,7 +43,7 @@ const CrieSuaConta = () => {
   };
 
   return (
-    <div className="crie-sua-conta-container">
+    <div className="crie-sua-conta-container" style={{ marginBottom: '40px' }}>
       <h2>Crie uma conta para entrar com processo de adoção na PetHero!</h2>
       <div className="form-box" style={{ marginBottom: "40px" }}>
         <h3>Preencha os campos abaixo com seus dados:</h3>

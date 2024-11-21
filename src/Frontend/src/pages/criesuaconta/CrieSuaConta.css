@@ -12,7 +12,7 @@
 h2 {
   color: #69a19b;
   font-size: 24px;
-  margin: 30px 0 20px; /* espaçamento superior e inferior */
+  margin: 40px 0 10px; /* espaçamento superior e inferior */
   text-align: center;
   line-height: 1.4; /* espaçamento entre as linhas */
 }
@@ -53,21 +53,4 @@ input {
 
 .finalizar-button:hover {
   background-color: #178f68;
-}
-
-/* ajuste pra telas menores (responsividade) */
-@media (max-width: 768px) {
-  h2 {
-    font-size: 20px; /* diminui tamanho da fonte para telas menores */
-    margin: 20px 0 15px; /* diminui o espaçamento */
-  }
-
-  .form-box {
-    width: 90%; /* arruma a largura do formulário pra caber em telas pequenas */
-    padding: 15px;
-  }
-
-  input, .finalizar-button {
-    font-size: 14px; /* essa parte reduz o tamanho dos campos e botões */
-  }
 }

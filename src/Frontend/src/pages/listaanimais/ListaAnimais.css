@@ -1,13 +1,13 @@
 /* src/pages/listaanimais/ListaAnimais.css */
 
-/* Contêiner principal para filtros e lista */
+/* contêiner principal para filtros e lista */
 .lista-animais-container {
     display: flex;
     gap: 20px;
     padding: 20px;
 }
 
-/* Estilização da barra de filtros */
+/* estilização da barra de filtros */
 .filtro {
     width: 250px;
     background-color: #e0f2f1;
@@ -48,7 +48,7 @@
 
 .animal-card {
     width: 5cm;
-    height: 6cm;
+    height: 8cm;
     background-color: #229C88;
     color: #fff;
     border-radius: 8px;
@@ -58,12 +58,12 @@
     flex-direction: column;
     align-items: left;
     text-align: left;
-    overflow: hidden; /* Esconde o excesso de conteúdo */
+    overflow: hidden; /* esconde o excesso de conteúdo */
 }
 
 .pet-image {
     width: 100%;
-    max-height: 3.5cm; /* Reduz o tamanho da imagem */
+    max-height: 3.5cm; /* reduz o tamanho da imagem */
     margin-bottom: 5px;
     border-radius: 5%;
     object-fit: cover;
@@ -71,6 +71,36 @@
 
 .animal-card h4,
 .animal-card p {
-    font-size: 14px; /* Reduz o tamanho da fonte */
-    margin: 5px 0; /* Reduz as margens entre textos */
+    font-size: 14px; /* reduz o tamanho da fonte */
+    margin: 5px 0; /* reduz as margens entre textos */
+}
+
+.adopt-button-container {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.adopt-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: #1fa078;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.adopt-button:hover {
+    background-color: #178f68;
+}
+
+.paw-icon-button {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
 }
