@@ -71,13 +71,13 @@ Clique no link para ter acesso ao Figma da Pet Hero: <a href="https://www.figma.
 Este projeto requer a instalação de algumas ferramentas e dependências para o ambiente de desenvolvimento. Certifique-se de ter todas elas configuradas antes de iniciar.
 🔧 Ferramentas Necessárias
 
-**Node.js**
-**React**
-**Express**
-**Nodemon**
-**Axios**
-**Bcrypt**
-**SQLite3**
+- **Node.js**
+- **React**
+- **Express**
+- **Nodemon**
+- **Axios**
+- **Bcrypt**
+- **SQLite3**
 
 💡 Sobre o Test-Suite Automatizado
 O projeto inclui um test-suite automatizado para validação de funcionalidades. Para executar os testes, utilize o comando apropriado (npm test, por exemplo) após instalar todas as dependências.
