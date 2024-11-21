@@ -5,19 +5,27 @@ import "./LoginCadastro.css";
 
 const LoginCadastro = () => {
   const navigate = useNavigate();
-  const [email, setEmail] = useState("");  // Estado para o e-mail
-  const [senha, setSenha] = useState("");  // Estado para a senha
-  const [erro, setErro] = useState("");   // Estado para mensagem de erro
+  const [email, setEmail] = useState(""); // Estado para o e-mail
+  const [senha, setSenha] = useState(""); // Estado para a senha
+  const [erro, setErro] = useState("");  // Estado para mensagem de erro
 
   const handleLogin = async (e) => {
-    e.preventDefault();  // Evita o envio tradicional do formulário
+    e.preventDefault(); // Evita o envio tradicional do formulário
+
+    // Validação simples para verificar se os campos foram preenchidos
+    if (!email || !senha) {
+      setErro("Por favor, preencha todos os campos.");
+      return;
+    }
 
     try {
       // Envia o e-mail e senha para o backend na rota /login
       const response = await api.post("usuarios/login", { email, senha });
 
-      if (response.data.success) {
-        // se login for bem-sucedido, armazenar o token no localStorage
+
+      if (response.data.message === "Login realizado com sucesso!") {
+        // Se login for bem-sucedido, armazenar o token no localStorage
+
         const token = response.data.token;
         localStorage.setItem("authToken", token);
 
@@ -58,10 +66,7 @@ const LoginCadastro = () => {
               value={senha}
               onChange={(e) => setSenha(e.target.value)} // Atualiza o estado da senha
             />
-            <button 
-              className="login-button"
-              onClick={() => navigate("/")}
-            >
+            <button className="login-button" type="submit">
               Entrar
             </button>
           </form>
@@ -82,7 +87,9 @@ const LoginCadastro = () => {
           <p>Junte-se a nós e ajude a transformar a vida de um bichinho! Cada adoção é uma nova chance.</p>
           <button
             className="register-button"
+
             onClick={() => navigate("/crie-sua-conta")}  // redireciona para a tela de cadastro
+ 
           >
             Criar minha conta
           </button>
