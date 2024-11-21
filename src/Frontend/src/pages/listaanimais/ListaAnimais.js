@@ -89,11 +89,16 @@ const ListaAnimais = () => {
                             alt={animal.nome}
                             className="pet-image"
                         />
+              
                         <h4>Nome: {animal.nome}</h4>
-                        <p>Idade: {animal.idade} anos</p>
-                        <p>Gênero: {animal.genero}</p>
-                        <p>Estado: {animal.estado || "Não informado"}</p>
-                        <div className="adopt-button-container">
+                        <p>Especie: {animal.especie} anos</p>
+                        <p>Idade: {animal.idade}</p>
+                        <p>Genero: {animal.sexo }</p>
+                        <p>Vacinado: {animal.vacinado || "Não informado"}</p>
+                        <p>Castrado: {animal.castrado || "Não informado" }</p>
+                        <p>Descrição: {animal.descricao }</p>
+                        <p></p>
+                                                <div className="adopt-button-container">
                             <Link to="/formulario-adocao" className="adopt-button">
                                 <img
                                     src="/imagens/pata.png"

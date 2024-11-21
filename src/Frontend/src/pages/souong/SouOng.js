@@ -93,16 +93,25 @@ function SouOng() {
         try {
             const { nomePet, especie, raca, idadePet, generoPet, vacinado, castrado, descricaoPet } = petData;
 
-            const response = await api.post("/pets", {
-                nome: nomePet,
-                especie,
-                raca: raca || null,
-                idade: idadePet || null,
-                genero: generoPet || null,
-                vacinado,
-                castrado,
-                descricao: descricaoPet || null,
-            });
+            const response = await api.post(
+                "/animais",
+                {
+                    nome: nomePet,
+                    especie,
+                    raca: raca || null,
+                    idade: idadePet || null,
+                    sexo: generoPet || null, // Corrigido para "sexo"
+                    vacinado: vacinado === "SIM",
+                    castrado: castrado === "SIM",
+                    descricao: descricaoPet || null,
+                    ong_responsavel_id: 1, // Inclua o ID real da ONG responsável
+                },
+                {
+                    headers: {
+                        Authorization: `Bearer ${localStorage.getItem("authToken")}`, // Token de autenticação
+                    },
+                }
+            );
 
             alert("Pet cadastrado com sucesso!");
             console.log("Pet cadastrado com sucesso:", response.data);
