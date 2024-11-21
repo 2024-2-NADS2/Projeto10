@@ -109,7 +109,7 @@ O Express é um framework para o Node.js que facilita a criação de aplicaçõe
 
 Instale o Express
 No terminal, execute:
-[Texto do Link] npm install express  
+''' npm install express  
 Crie o servidor Express
 Crie um arquivo chamado index.js e adicione o seguinte código:
 
@@ -133,26 +133,26 @@ Agora, o servidor Express estará rodando na porta 3000.
 O Nodemon é uma ferramenta que reinicia automaticamente o servidor sempre que detecta mudanças nos arquivos.
 
 Instale o Nodemon
-[Texto do Link] npm install -g nodemon  
+npm install -g nodemon  
 Para instalação local no projeto:
-[Texto do Link] npm install nodemon  
+npm install nodemon  
 Execute o servidor com o Nodemon
 Com o Nodemon instalado globalmente, inicie o servidor com:
-[Texto do Link] nodemon index.js  
+nodemon index.js  
 
 5️⃣ Configurando o Axios
 O Axios é uma biblioteca para realizar requisições HTTP, como GET, POST, PUT e DELETE.
 
 Instale o Axios
 No terminal, execute:
-[Texto do Link] npm install axios  
+npm install axios  
 
 6️⃣ Configurando o SQLite3
 O SQLite3 é uma biblioteca leve para banco de dados SQL, ideal para projetos que não exigem um servidor de banco de dados separado.
 
 Instale o SQLite3
 No terminal, execute:
-[Texto do Link] npm install sqlite3  
+npm install sqlite3  
 
 ## 📋 Licença/License
 <p xmlns:cc="http://creativecommons.org/ns#" >Feito por Andreia Alaini Silva, Bruna Farias Pires, Guilherme Mendes Albuquerque e Luan Meireles Franchini - FECAP <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p>
